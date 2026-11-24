@@ -1,0 +1,3443 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ප්‍රශ්න 174 — සිංහල MCQ ප්‍රශ්න පත්‍රය</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Sinhala"', 'Inter', 'sans-serif'],
+            sinhala: ['"Noto Sans Sinhala"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              600: '#1e3a5f',
+              700: '#162c48',
+              800: '#0f1f33',
+              900: '#091422',
+            },
+            tealbrand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              600: '#0f766e',
+              700: '#115e59',
+              800: '#134e4a',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Noto Sans Sinhala', 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.7;
+    }
+    .option-card {
+      transition: all 0.16s ease;
+    }
+    .option-card:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+  <!-- Top Header Bar -->
+  <header class="sticky top-0 z-30 bg-navy-700 text-white shadow-md border-b border-navy-800">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-tealbrand-600 flex items-center justify-center font-bold text-lg shadow-inner shrink-0">
+          174
+        </div>
+        <div class="min-w-0">
+          <h1 class="text-base sm:text-lg font-bold tracking-tight truncate">
+            ප්‍රශ්න 174 — සිංහල MCQ ප්‍රශ්න පත්‍රය
+          </h1>
+          <p class="text-xs text-slate-300 truncate">
+            ප්‍රශ්න සහ පිළිතුරු සංග්‍රහය · අන්තර්ක්‍රියාකාරී ඔන්ලයින් පුහුණුව
+          </p>
+        </div>
+      </div>
+
+      <!-- Mode Toggle & Reset Controls -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+        <div class="flex items-center bg-navy-800 p-1 rounded-xl border border-navy-600/60" role="group" aria-label="ප්‍රශ්න විලාසය">
+          <button
+            id="modeInstantBtn"
+            type="button"
+            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition bg-tealbrand-600 text-white shadow"
+            title="පිළිතුරු තේරූ සැණින් නිවැරදි පිළිතුර පෙන්වයි"
+          >
+            සැණින් පිළිතුරු
+          </button>
+          <button
+            id="modeExamBtn"
+            type="button"
+            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition text-slate-300 hover:text-white"
+            title="අවසානයේ සියලු ලකුණු සහ පිළිතුරු පෙන්වයි"
+          >
+            විභාග මාදිලිය
+          </button>
+        </div>
+
+        <button
+          id="openSummaryBtn"
+          type="button"
+          class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-semibold text-white border border-white/15 transition flex items-center gap-1.5"
+        >
+          <span>ලකුණු වාර්තාව</span>
+        </button>
+
+        <button
+          id="resetProgressBtn"
+          type="button"
+          class="px-3 py-2 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-xs sm:text-sm font-semibold text-white transition"
+          title="සියලු ප්‍රගතිය මකා දමන්න"
+        >
+          යළි සකසන්න
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Toast / Message Banner (replaces alert/confirm) -->
+  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-navy-800 text-white px-4 py-3 rounded-xl shadow-xl border border-tealbrand-600/50 text-sm">
+    <div class="flex items-center justify-between gap-3">
+      <span id="toastMessage"></span>
+      <button id="toastCloseBtn" type="button" class="text-slate-300 hover:text-white font-bold px-1">✕</button>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal (replaces confirm) -->
+  <div id="confirmModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
+      <h3 class="text-lg font-bold text-navy-700 mb-2">ප්‍රගතිය යළි සකසන්නද?</h3>
+      <p class="text-sm text-slate-600 mb-5">
+        ඔබ ලබා දී ඇති සියලුම පිළිතුරු සහ ලකුණු මැකී යනු ඇත. (පිටුසලකුණු / Bookmarks පවත්වා ගැනීමට හෝ සියල්ල මැකීමට තෝරන්න.)
+      </p>
+      <div class="flex flex-col sm:flex-row gap-2.5 justify-end">
+        <button id="cancelResetBtn" type="button" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold">
+          අවලංගු කරන්න
+        </button>
+        <button id="confirmResetKeepBookmarksBtn" type="button" class="px-4 py-2.5 rounded-xl bg-tealbrand-600 hover:bg-tealbrand-700 text-white text-sm font-semibold">
+          පිළිතුරු පමණක් මකන්න
+        </button>
+        <button id="confirmResetAllBtn" type="button" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold">
+          සියල්ල මකන්න
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Workspace -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
+    <!-- Left / Primary Column: Filter Bar + Active MCQ Card -->
+    <section class="lg:col-span-8 flex flex-col gap-4">
+      <!-- Section & Filter Controls Card -->
+      <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-4 space-y-3.5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="sectionSelect" class="block text-xs font-semibold text-slate-600 mb-1">
+              කොටස තෝරන්න (Sections)
+            </label>
+            <select
+              id="sectionSelect"
+              class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-tealbrand-600 focus:bg-white"
+            >
+              <option value="ALL">සියලුම කොටස් (ප්‍රශ්න 1 – 174)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="statusFilterSelect" class="block text-xs font-semibold text-slate-600 mb-1">
+              පෙරහන (Filter by Status)
+            </label>
+            <select
+              id="statusFilterSelect"
+              class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-tealbrand-600 focus:bg-white"
+            >
+              <option value="ALL">සියලුම ප්‍රශ්න</option>
+              <option value="UNANSWERED">පිළිතුරු නොදුන් ප්‍රශ්න</option>
+              <option value="INCORRECT">වැරදි පිළිතුරු (Incorrect)</option>
+              <option value="CORRECT">නිවැරදි පිළිතුරු (Correct)</option>
+              <option value="BOOKMARKED">පිටුසලකුණු කළ ප්‍රශ්න (Bookmarked)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Search Input + Progress Bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+          <div class="relative flex-1">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="ප්‍රශ්න හෝ පිළිතුරු සොයන්න (උදා: මහවැලි, GovPay, SAARC, 1948)..."
+              class="w-full rounded-xl border border-slate-300 bg-slate-50 pl-3.5 pr-9 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-tealbrand-600 focus:bg-white"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-xs font-bold px-1"
+              title="සෙවීම හිස් කරන්න"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="text-xs sm:text-sm font-semibold text-navy-700 bg-navy-50 px-3 py-2 rounded-xl border border-navy-100 shrink-0 flex items-center gap-2">
+            <span>ප්‍රගතිය:</span>
+            <span id="progressCountText" class="text-tealbrand-700 font-bold">0 / 174</span>
+          </div>
+        </div>
+
+        <!-- Overall Progress Bar -->
+        <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+          <div id="overallProgressBar" class="h-full bg-gradient-to-r from-navy-600 to-tealbrand-600 transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Active Question Card -->
+      <div id="questionCard" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-7 flex flex-col gap-5">
+        <!-- Empty state when filter yields no questions -->
+        <div id="emptyFilterState" class="hidden text-center py-12 px-4">
+          <p class="text-lg font-bold text-navy-700 mb-1">තෝරාගත් පෙරහනට ගැළපෙන ප්‍රශ්න නොමැත</p>
+          <p class="text-sm text-slate-500 mb-4">වෙනත් කොටසක් හෝ පෙරහනක් තෝරන්න, නැතහොත් සෙවුම් පදය වෙනස් කරන්න.</p>
+          <button
+            id="resetFiltersBtn"
+            type="button"
+            class="px-4 py-2 rounded-xl bg-tealbrand-600 hover:bg-tealbrand-700 text-white text-sm font-semibold"
+          >
+            සියලු පෙරහන් යළි සකසන්න
+          </button>
+        </div>
+
+        <!-- Question Content Container -->
+        <div id="questionContent" class="space-y-5">
+          <!-- Top Meta Badges -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="qNumberBadge" class="px-3 py-1 rounded-full bg-navy-700 text-white text-xs sm:text-sm font-bold">
+                ප්‍රශ්නය #1
+              </span>
+              <span id="qSectionBadge" class="px-3 py-1 rounded-full bg-tealbrand-50 text-tealbrand-800 border border-tealbrand-200 text-xs font-semibold">
+                කොටස
+              </span>
+              <span id="qQueueBadge" class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">
+                1 / 174
+              </span>
+            </div>
+
+            <button
+              id="bookmarkBtn"
+              type="button"
+              class="px-3 py-1.5 rounded-xl border border-slate-200 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-1.5 transition"
+              aria-pressed="false"
+            >
+              <span id="bookmarkIcon">☆</span>
+              <span id="bookmarkLabel">පිටුසලකුණ</span>
+            </button>
+          </div>
+
+          <!-- Question Text -->
+          <div>
+            <h2 id="questionText" class="text-lg sm:text-xl font-bold text-slate-900 leading-relaxed">
+              ප්‍රශ්නය පූරණය වෙමින් පවතී...
+            </h2>
+          </div>
+
+          <!-- 4 MCQ Options (A, B, C, D) -->
+          <div id="optionsContainer" class="grid grid-cols-1 gap-3" role="radiogroup" aria-labelledby="questionText">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Instant / Exam Feedback & Reference Answer Box -->
+          <div id="feedbackBox" class="hidden rounded-2xl p-4 sm:p-5 border transition-all">
+            <div class="flex items-start justify-between gap-3">
+              <div class="space-y-1.5">
+                <div id="feedbackTitle" class="text-sm sm:text-base font-bold"></div>
+                <p id="feedbackDetail" class="text-xs sm:text-sm text-slate-700 leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Footer inside Question Card -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
+            <button
+              id="prevQuestionBtn"
+              type="button"
+              class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:pointer-events-none text-slate-800 text-sm font-semibold flex items-center gap-1.5 transition"
+            >
+              <span>← පෙර ප්‍රශ්නය</span>
+            </button>
+
+            <div class="flex items-center gap-2">
+              <button
+                id="clearAnswerBtn"
+                type="button"
+                class="px-3.5 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-600 text-xs sm:text-sm font-medium transition"
+              >
+                පිළිතුර ඉවත් කරන්න
+              </button>
+              <button
+                id="finishExamBtn"
+                type="button"
+                class="px-4 py-2.5 rounded-xl bg-navy-700 hover:bg-navy-800 text-white text-xs sm:text-sm font-semibold transition"
+              >
+                ප්‍රතිඵල බලන්න
+              </button>
+            </div>
+
+            <button
+              id="nextQuestionBtn"
+              type="button"
+              class="px-4 py-2.5 rounded-xl bg-tealbrand-600 hover:bg-tealbrand-700 disabled:opacity-40 disabled:pointer-events-none text-white text-sm font-semibold flex items-center gap-1.5 shadow-xs transition"
+            >
+              <span>ඊළඟ ප්‍රශ්නය →</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Score Summary & Section Breakdown Panel (Collapsible / Viewable anytime) -->
+      <div id="summaryPanel" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-7 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-navy-700">ලකුණු සාරාංශය සහ විශ්ලේෂණය</h2>
+            <p class="text-xs sm:text-sm text-slate-500">ඔබගේ සමස්ත කාර්ය සාධනය සහ කොටස් අනුව ප්‍රතිඵල</p>
+          </div>
+          <button
+            id="closeSummaryBtn"
+            type="button"
+            class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold"
+          >
+            ප්‍රශ්න වෙත යන්න
+          </button>
+        </div>
+
+        <!-- KPI Stats Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="rounded-2xl bg-navy-50 border border-navy-100 p-4">
+            <div class="text-xs font-semibold text-navy-600">ලකුණු ප්‍රතිශතය</div>
+            <div id="statPercentage" class="text-2xl sm:text-3xl font-bold text-navy-800 mt-1">0%</div>
+          </div>
+          <div class="rounded-2xl bg-emerald-50 border border-emerald-200 p-4">
+            <div class="text-xs font-semibold text-emerald-700">නිවැරදි පිළිතුරු</div>
+            <div id="statCorrect" class="text-2xl sm:text-3xl font-bold text-emerald-800 mt-1">0</div>
+          </div>
+          <div class="rounded-2xl bg-rose-50 border border-rose-200 p-4">
+            <div class="text-xs font-semibold text-rose-700">වැරදි පිළිතුරු</div>
+            <div id="statIncorrect" class="text-2xl sm:text-3xl font-bold text-rose-800 mt-1">0</div>
+          </div>
+          <div class="rounded-2xl bg-slate-100 border border-slate-200 p-4">
+            <div class="text-xs font-semibold text-slate-600">පිළිතුරු නොදුන්</div>
+            <div id="statUnanswered" class="text-2xl sm:text-3xl font-bold text-slate-800 mt-1">174</div>
+          </div>
+        </div>
+
+        <!-- Action Buttons for Incorrect / All Review -->
+        <div class="flex flex-wrap items-center gap-3">
+          <button
+            id="retryIncorrectBtn"
+            type="button"
+            class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold shadow-xs transition"
+          >
+            වැරදි ප්‍රශ්න නැවත පුහුණු වන්න (Retry Incorrect)
+          </button>
+          <button
+            id="reviewIncorrectListBtn"
+            type="button"
+            class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold transition"
+          >
+            වැරදි පිළිතුරු ලැයිස්තුව බලන්න
+          </button>
+          <button
+            id="reviewAllListBtn"
+            type="button"
+            class="px-4 py-2.5 rounded-xl bg-navy-700 hover:bg-navy-800 text-white text-sm font-semibold transition"
+          >
+            සියලු ප්‍රශ්න 174 සහ පිළිතුරු බලන්න
+          </button>
+        </div>
+
+        <!-- Section-by-Section Breakdown -->
+        <div>
+          <h3 class="text-base font-bold text-navy-700 mb-3">කොටස් අනුව ලකුණු බිඳවැටීම</h3>
+          <div id="sectionBreakdownList" class="space-y-2.5">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Review List Container -->
+        <div id="reviewListContainer" class="hidden space-y-3 pt-2 border-t border-slate-100">
+          <div class="flex items-center justify-between">
+            <h3 id="reviewListTitle" class="text-base font-bold text-navy-700">පිළිතුරු සමාලෝචනය</h3>
+            <button id="hideReviewListBtn" type="button" class="text-xs font-semibold text-tealbrand-700 hover:underline">
+              සඟවන්න
+            </button>
+          </div>
+          <div id="reviewItems" class="space-y-3 max-h-[520px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Question Navigator Grid (1–174) & Legend -->
+    <aside class="lg:col-span-4 flex flex-col gap-4">
+      <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-4 sticky top-20">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="text-sm sm:text-base font-bold text-navy-700">
+            ප්‍රශ්න සිතියම (1 – 174)
+          </h2>
+          <span id="navFilteredCount" class="text-xs font-semibold text-slate-500">
+            ප්‍රශ්න 174
+          </span>
+        </div>
+
+        <!-- Legend -->
+        <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-3 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded bg-emerald-600 inline-block shrink-0"></span>
+            <span>නිවැරදි</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded bg-rose-600 inline-block shrink-0"></span>
+            <span>වැරදි</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded bg-sky-600 inline-block shrink-0"></span>
+            <span>පිළිතුරු දුන් (විභාග)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded bg-amber-100 border-2 border-amber-500 inline-block shrink-0"></span>
+            <span>පිටුසලකුණු කළ</span>
+          </div>
+        </div>
+
+        <!-- Direct Jump Input -->
+        <div class="flex items-center gap-2 mb-3">
+          <input
+            id="jumpQuestionInput"
+            type="number"
+            min="1"
+            max="174"
+            placeholder="ප්‍රශ්න අංකය (1–174)"
+            class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3 py-1.5 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tealbrand-600"
+          />
+          <button
+            id="jumpQuestionBtn"
+            type="button"
+            class="px-3 py-1.5 rounded-xl bg-navy-700 hover:bg-navy-800 text-white text-xs sm:text-sm font-semibold shrink-0"
+          >
+            යන්න
+          </button>
+        </div>
+
+        <!-- 1–174 Grid -->
+        <div id="questionGrid" class="grid grid-cols-7 sm:grid-cols-10 lg:grid-cols-7 gap-1.5 max-h-[390px] overflow-y-auto pr-1">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Quick Stats Footer -->
+        <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+          <span>නිවැරදි: <strong id="miniCorrect" class="text-emerald-700">0</strong></span>
+          <span>වැරදි: <strong id="miniIncorrect" class="text-rose-700">0</strong></span>
+          <span>පිටුසලකුණු: <strong id="miniBookmarked" class="text-amber-600">0</strong></span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="bg-navy-800 text-slate-300 text-xs py-4 px-4 mt-8 border-t border-navy-900">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>ප්‍රශ්න 174 — ප්‍රශ්න සහ පිළිතුරු සංග්‍රහය මත පදනම් වූ සිංහල MCQ පුහුණු පද්ධතිය</span>
+      <span>ඔබගේ ප්‍රගතිය ස්වයංක්‍රීයව සුරැකේ (localStorage)</span>
+    </div>
+  </footer>
+
+  <script>
+    /**
+     * 7 Sections from the PDF document ("ප්‍රශ්න 174 - ප්‍රශ්න සහ පිළිතුරු සංග්‍රහය")
+     */
+    const SECTIONS = [
+      {
+        id: 1,
+        title: "1. ශ්‍රී ලංකාව — ආර්ථිකය, සංඛ්‍යාලේඛන සහ සංවර්ධනය",
+        range: [1, 15]
+      },
+      {
+        id: 2,
+        title: "2. භූගෝලය, පරිසරය සහ වාරිමාර්ග",
+        range: [16, 20]
+      },
+      {
+        id: 3,
+        title: "3. පාලනය, ව්‍යවස්ථාව සහ ප්‍රජාතන්ත්‍රවාදය",
+        range: [21, 22]
+      },
+      {
+        id: 4,
+        title: "4. ක්‍රීඩා සහ ජාත්‍යන්තර තරග",
+        range: [23, 27]
+      },
+      {
+        id: 5,
+        title: "5. සම්භාවනීය චරිත සහ අභාවයන්",
+        range: [28, 29]
+      },
+      {
+        id: 6,
+        title: "6. ජාත්‍යන්තර පුවත්, විද්‍යාව සහ අභ්‍යවකාශය",
+        range: [30, 45]
+      },
+      {
+        id: 7,
+        title: "7. අතිරේක සංග්‍රහය — ප්‍රශ්න හා පිළිතුරු (46–174)",
+        range: [46, 174]
+      }
+    ];
+
+    /**
+     * All 174 Questions & Answers from the PDF, structured as 4-option MCQs (A, B, C, D)
+     * Correct answer matches the PDF faithfully (including corrupted PDF text restored cleanly like GovPay, SAARC, ASEAN, COP).
+     */
+    const QUESTIONS = [
+      // Section 1: 1-15
+      {
+        id: 1,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශකය (HDI) සඳහා UNDP වාර්තා අනුව දක්වා ඇති අගය සහ ශ්‍රේණිගත කිරීම කුමක්ද?",
+        answer: "2025 මානව සංවර්ධන වාර්තාවට අනුව ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශක අගය 0.776 ක් වන අතර එහි ශ්‍රේණිගත කිරීම 89 වන ස්ථානයයි.",
+        options: [
+          "2025 මානව සංවර්ධන වාර්තාවට අනුව ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශක අගය 0.776 ක් වන අතර එහි ශ්‍රේණිගත කිරීම 89 වන ස්ථානයයි.",
+          "2025 මානව සංවර්ධන වාර්තාවට අනුව ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශක අගය 0.812 ක් වන අතර එහි ශ්‍රේණිගත කිරීම 64 වන ස්ථානයයි.",
+          "2025 මානව සංවර්ධන වාර්තාවට අනුව ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශක අගය 0.734 ක් වන අතර එහි ශ්‍රේණිගත කිරීම 102 වන ස්ථානයයි.",
+          "2025 මානව සංවර්ධන වාර්තාවට අනුව ශ්‍රී ලංකාවේ මානව සංවර්ධන දර්ශක අගය 0.695 ක් වන අතර එහි ශ්‍රේණිගත කිරීම 115 වන ස්ථානයයි."
+        ]
+      },
+      {
+        id: 2,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ දිළිඳු නිවාස ඒකක සංඛ්‍යාව හෝ දරිද්‍රතා අනුපාතය පිළිබඳ නිල සංඛ්‍යා ලේඛන කවරේද?",
+        answer: "නිශ්චිත නිවාස ඒකක ගණන මෙහි සඳහන් කර නොමැති නමුත්, ජනලේඛන හා සංඛ්‍යාලේඛන දෙපාර්තමේන්තු දත්ත අනුව 2025 පළමු කාර්තුව වන විට දරිද්‍රතා හිසගණන දර්ශකය 16.0% දක්වා ඉහළ ගොස් ඇති අතර, ජාත්‍යන්තර මූලාශ්‍රවල 2024–2025 කාලය සඳහා දරිද්‍රතා රේඛාවට පහළින් සිටින ප්‍රතිශතය 14.3% ලෙස වාර්තා වේ.",
+        options: [
+          "නිශ්චිත නිවාස ඒකක ගණන මෙහි සඳහන් කර නොමැති නමුත්, ජනලේඛන හා සංඛ්‍යාලේඛන දෙපාර්තමේන්තු දත්ත අනුව 2025 පළමු කාර්තුව වන විට දරිද්‍රතා හිසගණන දර්ශකය 16.0% දක්වා ඉහළ ගොස් ඇති අතර, ජාත්‍යන්තර මූලාශ්‍රවල 2024–2025 කාලය සඳහා දරිද්‍රතා රේඛාවට පහළින් සිටින ප්‍රතිශතය 14.3% ලෙස වාර්තා වේ.",
+          "2025 පළමු කාර්තුව වන විට දරිද්‍රතා හිසගණන දර්ශකය 7.2% දක්වා අඩු වී ඇති අතර ජාත්‍යන්තර මූලාශ්‍රවල එය 5.8% ලෙස වාර්තා වේ.",
+          "2025 පළමු කාර්තුව වන විට දරිද්‍රතා හිසගණන දර්ශකය 24.5% ක් වන අතර නිවාස ඒකක 450,000 ක් නිල වශයෙන් ලියාපදිංචි කර ඇත.",
+          "දරිද්‍රතා හිසගණන දර්ශකය 11.4% ක් ලෙස පවතින අතර ජාත්‍යන්තර දරිද්‍රතා රේඛාවට පහළින් සිටින ප්‍රතිශතය 9.1% කි."
+        ]
+      },
+      {
+        id: 3,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ දළ දේශීය නිෂ්පාදිතයට (GDP) වැඩිම දායකත්වයක් සපයන පළාත කුමක්ද?",
+        answer: "බස්නාහිර පළාත (2024 පළාත් දළ දේශීය නිෂ්පාදිතයෙන් ආසන්න වශයෙන් 42.4% ක දායකත්වයක්).",
+        options: [
+          "බස්නාහිර පළාත (2024 පළාත් දළ දේශීය නිෂ්පාදිතයෙන් ආසන්න වශයෙන් 42.4% ක දායකත්වයක්).",
+          "මධ්‍යම පළාත (2024 පළාත් දළ දේශීය නිෂ්පාදිතයෙන් ආසන්න වශයෙන් 28.5% ක දායකත්වයක්).",
+          "දකුණු පළාත (2024 පළාත් දළ දේශීය නිෂ්පාදිතයෙන් ආසන්න වශයෙන් 22.0% ක දායකත්වයක්).",
+          "වයඹ පළාත (2024 පළාත් දළ දේශීය නිෂ්පාදිතයෙන් ආසන්න වශයෙන් 19.8% ක දායකත්වයක්)."
+        ]
+      },
+      {
+        id: 4,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන කෘෂිකාර්මික අපනයන භෝග මොනවාද?",
+        answer: "තේ, රබර්, පොල් සහ කුළුබඩු.",
+        options: [
+          "තේ, රබර්, පොල් සහ කුළුබඩු.",
+          "වී, බඩඉරිඟු, සෝයා සහ මුං ඇට.",
+          "කෝපි, කොකෝවා, කජු සහ කෙසෙල්.",
+          "උක්, තිරිඟු, කපු සහ මල් වර්ග."
+        ]
+      },
+      {
+        id: 5,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ විදේශ ප්‍රේෂණ (Remittances) ලැබීම්වලින් ඉහළම ප්‍රමාණයක් ලැබෙන රටවල් මොනවාද?",
+        answer: "එක්සත් අරාබි එමීර් රාජ්‍යය, කුවේට්, එක්සත් රාජධානිය සහ සෞදි අරාබිය ප්‍රධාන වේ.",
+        options: [
+          "එක්සත් අරාබි එමීර් රාජ්‍යය, කුවේට්, එක්සත් රාජධානිය සහ සෞදි අරාබිය ප්‍රධාන වේ.",
+          "ඉන්දියාව, චීනය, ජපානය සහ දකුණු කොරියාව ප්‍රධාන වේ.",
+          "කැනඩාව, ඔස්ට්‍රේලියාව, ප්‍රංශය සහ ජර්මනිය ප්‍රධාන වේ.",
+          "කටාර්, ඕමානය, මැලේසියාව සහ සිංගප්පූරුව ප්‍රධාන වේ."
+        ]
+      },
+      {
+        id: 6,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ ජනගහනයෙන් වැඩිම පිරිසක් සිටින වයස් කාණ්ඩය කුමක්ද?",
+        answer: "වයස අවුරුදු 15–64 අතර ශ්‍රම බලකා / වැඩකරන වයස් කාණ්ඩය (ජනගහනයෙන් ආසන්න වශයෙන් 65.8% ක්).",
+        options: [
+          "වයස අවුරුදු 15–64 අතර ශ්‍රම බලකා / වැඩකරන වයස් කාණ්ඩය (ජනගහනයෙන් ආසන්න වශයෙන් 65.8% ක්).",
+          "වයස අවුරුදු 0–14 අතර ළමා වයස් කාණ්ඩය (ජනගහනයෙන් ආසන්න වශයෙන් 42.1% ක්).",
+          "වයස අවුරුදු 65 ට වැඩි ජ්‍යෙෂ්ඨ පුරවැසි කාණ්ඩය (ජනගහනයෙන් ආසන්න වශයෙන් 24.5% ක්).",
+          "වයස අවුරුදු 5–18 අතර පාසල් වයස් කාණ්ඩය (ජනගහනයෙන් ආසන්න වශයෙන් 35.0% ක්)."
+        ]
+      },
+      {
+        id: 7,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ යැපුම් අනුපාතය (Dependency Ratio) සහ දළ උපත් අනුපාතය (Crude Birth Rate) පිළිබඳ දත්ත මොනවාද?",
+        answer: "2024 සංගණන වාර්තා අනුව මුළු යැපුම් අනුපාතය 33.7 ක් සහ වැඩිහිටි යැපුම් අනුපාතය 29.4 ක් වන අතර, දළ උපත් අනුපාතය ජනගහන 1,000 කට උපත් 11.2 ක් ලෙස ඇස්තමේන්තු කර ඇත.",
+        options: [
+          "2024 සංගණන වාර්තා අනුව මුළු යැපුම් අනුපාතය 33.7 ක් සහ වැඩිහිටි යැපුම් අනුපාතය 29.4 ක් වන අතර, දළ උපත් අනුපාතය ජනගහන 1,000 කට උපත් 11.2 ක් ලෙස ඇස්තමේන්තු කර ඇත.",
+          "මුළු යැපුම් අනුපාතය 54.2 ක් සහ වැඩිහිටි යැපුම් අනුපාතය 18.0 ක් වන අතර, දළ උපත් අනුපාතය 1,000 කට 19.6 කි.",
+          "මුළු යැපුම් අනුපාතය 41.0 ක් සහ වැඩිහිටි යැපුම් අනුපාතය 12.5 ක් වන අතර, දළ උපත් අනුපාතය 1,000 කට 8.4 කි.",
+          "මුළු යැපුම් අනුපාතය 27.8 ක් සහ වැඩිහිටි යැපුම් අනුපාතය 35.2 ක් වන අතර, දළ උපත් අනුපාතය 1,000 කට 15.0 කි."
+        ]
+      },
+      {
+        id: 8,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ රාජ්‍ය අංශයේ සේවක සංඛ්‍යාව ආසන්න වශයෙන් කොපමණද?",
+        answer: "ජනලේඛන හා සංඛ්‍යාලේඛන දෙපාර්තමේන්තුවේ 2024 රාජ්‍ය හා අර්ධ රාජ්‍ය අංශ සේවක සංගණන මූලික වාර්තාවට අනුව රාජ්‍ය අංශයේ සේවකයින් 938,763 ක් සහ අර්ධ රාජ්‍ය අංශයේ සේවකයින් 217,255 ක් ඇතුළුව මුළු සේවක සංඛ්‍යාව 1,156,018 කි.",
+        options: [
+          "ජනලේඛන හා සංඛ්‍යාලේඛන දෙපාර්තමේන්තුවේ 2024 රාජ්‍ය හා අර්ධ රාජ්‍ය අංශ සේවක සංගණන මූලික වාර්තාවට අනුව රාජ්‍ය අංශයේ සේවකයින් 938,763 ක් සහ අර්ධ රාජ්‍ය අංශයේ සේවකයින් 217,255 ක් ඇතුළුව මුළු සේවක සංඛ්‍යාව 1,156,018 කි.",
+          "රාජ්‍ය අංශයේ සේවකයින් 650,000 ක් සහ අර්ධ රාජ්‍ය අංශයේ සේවකයින් 120,000 ක් ඇතුළුව මුළු සේවක සංඛ්‍යාව 770,000 කි.",
+          "රාජ්‍ය අංශයේ සේවකයින් 1,250,000 ක් සහ අර්ධ රාජ්‍ය අංශයේ සේවකයින් 350,000 ක් ඇතුළුව මුළු සේවක සංඛ්‍යාව 1,600,000 කි.",
+          "රාජ්‍ය අංශයේ සේවකයින් 810,400 ක් සහ අර්ධ රාජ්‍ය අංශයේ සේවකයින් 195,600 ක් ඇතුළුව මුළු සේවක සංඛ්‍යාව 1,006,000 කි."
+        ]
+      },
+      {
+        id: 9,
+        section: 1,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධානතම අපනයන ගමනාන්ත රට සහ ප්‍රධාන අපනයන කර්මාන්තය කුමක්ද?",
+        answer: "ප්‍රධානතම අපනයන ගමනාන්ත රට එක්සත් ජනපදය වන අතර, ප්‍රධානතම භාණ්ඩ අපනයන කර්මාන්තය ඇඟලුම් කර්මාන්තයයි.",
+        options: [
+          "ප්‍රධානතම අපනයන ගමනාන්ත රට එක්සත් ජනපදය වන අතර, ප්‍රධානතම භාණ්ඩ අපනයන කර්මාන්තය ඇඟලුම් කර්මාන්තයයි.",
+          "ප්‍රධානතම අපනයන ගමනාන්ත රට චීනය වන අතර, ප්‍රධානතම භාණ්ඩ අපනයන කර්මාන්තය රබර් කර්මාන්තයයි.",
+          "ප්‍රධානතම අපනයන ගමනාන්ත රට ජපානය වන අතර, ප්‍රධානතම භාණ්ඩ අපනයන කර්මාන්තය පොල් කර්මාන්තයයි.",
+          "ප්‍රධානතම අපනයන ගමනාන්ත රට රුසියාව වන අතර, ප්‍රධානතම භාණ්ඩ අපනයන කර්මාන්තය මැණික් කර්මාන්තයයි."
+        ]
+      },
+      {
+        id: 10,
+        section: 1,
+        q: "ශ්‍රී ලංකාවට ලැබෙන විදේශ ආධාර හෝ ව්‍යාපෘති සම්බන්ධයෙන් 2025 දී ඇමරිකා එක්සත් ජනපදය ගත් තීරණය කුමක්ද?",
+        answer: "2025 ජනවාරි මාසයේදී එක්සත් ජනපද පරිපාලනය විසින් USAID හරහා ලබා දෙන විදේශ ආධාර අත්හිටුවීමේ නියෝගය හේතුවෙන් ශ්‍රී ලංකාවේ USAID අරමුදල් සහිත ව්‍යාපෘති අත්හිටුවීමට/නතර කිරීමට සිදු විය.",
+        options: [
+          "2025 ජනවාරි මාසයේදී එක්සත් ජනපද පරිපාලනය විසින් USAID හරහා ලබා දෙන විදේශ ආධාර අත්හිටුවීමේ නියෝගය හේතුවෙන් ශ්‍රී ලංකාවේ USAID අරමුදල් සහිත ව්‍යාපෘති අත්හිටුවීමට/නතර කිරීමට සිදු විය.",
+          "2025 දී එක්සත් ජනපදය විසින් ශ්‍රී ලංකාවේ සියලුම කෘෂිකාර්මික ණය කපා හැරීමට තීරණය කළේය.",
+          "2025 දී USAID ආධාර දෙගුණ කර අලුත් ව්‍යාපෘති 50 ක් ආරම්භ කිරීමට නිවේදනය කළේය.",
+          "2025 දී ශ්‍රී ලංකාවේ සියලුම වරාය ව්‍යාපෘති සඳහා එක්සත් ජනපදය සෘජු මූල්‍ය ප්‍රදානයක් ලබා දුන්නේය."
+        ]
+      },
+      {
+        id: 11,
+        section: 1,
+        q: "මන්නාරම් සුළං විදුලි ව්‍යාපෘතියෙන් ඉවත් වූ ඉන්දියානු සමාගම කුමක්ද?",
+        answer: "අදානි සමූහය (Adani Green Energy).",
+        options: [
+          "අදානි සමූහය (Adani Green Energy).",
+          "ටාටා පවර් (Tata Power).",
+          "රිලායන්ස් ඉන්ඩස්ට්‍රීස් (Reliance Industries).",
+          "එන්.ටී.පී.සී. (NTPC Limited)."
+        ]
+      },
+      {
+        id: 12,
+        section: 1,
+        q: "කොළඹ මැරීන් ඩ්‍රයිව් (Marine Drive) ආශ්‍රිත සංවර්ධන යෝජනාව සම්බන්ධයෙන් රජය ගත් තීරණය කුමක්ද?",
+        answer: "කොල්ලුපිටිය දුම්රිය ස්ථානයේ සිට දෙහිවල දක්වා මැරීන් ඩ්‍රයිව් තීරය “Marine Nights, Awakening Colombo” යන තේමාව යටතේ සංවර්ධනය කිරීමට කැබිනට් අනුමැතිය හිමි විය.",
+        options: [
+          "කොල්ලුපිටිය දුම්රිය ස්ථානයේ සිට දෙහිවල දක්වා මැරීන් ඩ්‍රයිව් තීරය “Marine Nights, Awakening Colombo” යන තේමාව යටතේ සංවර්ධනය කිරීමට කැබිනට් අනුමැතිය හිමි විය.",
+          "මැරීන් ඩ්‍රයිව් මාර්ගය සම්පූර්ණයෙන්ම පදිකයින් සඳහා පමණක් වෙන් කිරීමට තීරණය විය.",
+          "මොරටුව සිට ගල්කිස්ස දක්වා අධිවේගී මුහුදු පාලමක් ඉදි කිරීමට අනුමැතිය හිමි විය.",
+          "මැරීන් ඩ්‍රයිව් තීරයේ සියලුම වෙළඳ කුටි ඉවත් කර වනෝද්‍යානයක් ඉදි කිරීමට තීරණය විය."
+        ]
+      },
+      {
+        id: 13,
+        section: 1,
+        q: "මහනුවර ඉදිවන ප්‍රථම තරු හතේ (7-Star) සංචාරක හෝටල් ව්‍යාපෘතිය ලෙස හඳුන්වනු ලබන්නේ කුමක්ද?",
+        answer: "අවියානා පෞද්ගලික චැලේට් / අවියානා සංචාරක රිසෝට් ව්‍යාපෘතිය (Aviyana Private Chalets / Aviyana).",
+        options: [
+          "අවියානා පෞද්ගලික චැලේට් / අවියානා සංචාරක රිසෝට් ව්‍යාපෘතිය (Aviyana Private Chalets / Aviyana).",
+          "කැන්ඩි හිල්ස් රිසෝට් ව්‍යාපෘතිය (Kandy Hills Resort).",
+          "මහවැලි ග්‍රෑන්ඩ් පැලස් (Mahaweli Grand Palace).",
+          "සෙන්ට්‍රල් හයිලන්ඩ්ස් විලාස් (Central Highlands Villas)."
+        ]
+      },
+      {
+        id: 14,
+        section: 1,
+        q: "වසර 35 කට පසු නැවත ආරම්භ කරන ලද මැටි උළු කර්මාන්තශාලාව කුමක්ද?",
+        answer: "ඔඩුසුඩාන් උළු කර්මාන්තශාලාව (Oddusuddan Tile Factory).",
+        options: [
+          "ඔඩුසුඩාන් උළු කර්මාන්තශාලාව (Oddusuddan Tile Factory).",
+          "මුලතිව් මැටි භාණ්ඩ කර්මාන්තශාලාව.",
+          "කැලණිය උළු කර්මාන්තශාලාව.",
+          "හලාවත මැටි උළු කර්මාන්තශාලාව."
+        ]
+      },
+      {
+        id: 15,
+        section: 1,
+        q: "2025 මාර්තු මාසයේදී ලුණු නිෂ්පාදන හා බෙදාහැරීමේ කටයුතු සම්බන්ධයෙන් ප්‍රමුඛ අවධානයට ලක් වූ ලුණු කර්මාන්තශාලාව හා නිෂ්පාදනය කුමක්ද?",
+        answer: "අලිමංකඩ ලුණු කර්මාන්තශාලාව නැවත විවෘත කිරීම සහ ජාතික ලුණු සමාගම මගින් ‘රාජ ලුණු’ මේස ලුණු හඳුන්වා දීම.",
+        options: [
+          "අලිමංකඩ ලුණු කර්මාන්තශාලාව නැවත විවෘත කිරීම සහ ජාතික ලුණු සමාගම මගින් ‘රාජ ලුණු’ මේස ලුණු හඳුන්වා දීම.",
+          "හම්බන්තොට ලුණු ලේවාය පෞද්ගලීකරණය කිරීම සහ ‘සයුරු ලුණු’ හඳුන්වා දීම.",
+          "පුත්තලම ලුණු කර්මාන්තශාලාව වසා දැමීම සහ ආනයනික ලුණු පමණක් බෙදා හැරීම.",
+          "මන්නාරම ලුණු ලේවාය පුළුල් කිරීම සහ ‘ලංකා ලුණු’ හඳුන්වා දීම."
+        ]
+      },
+
+      // Section 2: 16-20
+      {
+        id: 16,
+        section: 2,
+        q: "ශ්‍රී ලංකාවේ මුළු භූමි ප්‍රමාණය සහ ගොඩබිම ප්‍රමාණය කොපමණද?",
+        answer: "මුළු භූමි ප්‍රමාණය ආසන්න වශයෙන් වර්ග කිලෝමීටර් 65,610 ක් වන අතර, ඉන් ගොඩබිම් ප්‍රමාණය වර්ග කිලෝමීටර් 62,705 ක් සහ අභ්‍යන්තර ජල ප්‍රමාණය වර්ග කිලෝමීටර් 2,905 කි.",
+        options: [
+          "මුළු භූමි ප්‍රමාණය ආසන්න වශයෙන් වර්ග කිලෝමීටර් 65,610 ක් වන අතර, ඉන් ගොඩබිම් ප්‍රමාණය වර්ග කිලෝමීටර් 62,705 ක් සහ අභ්‍යන්තර ජල ප්‍රමාණය වර්ග කිලෝමීටර් 2,905 කි.",
+          "මුළු භූමි ප්‍රමාණය ආසන්න වශයෙන් වර්ග කිලෝමීටර් 68,400 ක් වන අතර, ඉන් ගොඩබිම් ප්‍රමාණය වර්ග කිලෝමීටර් 65,000 ක් සහ අභ්‍යන්තර ජල ප්‍රමාණය වර්ග කිලෝමීටර් 3,400 කි.",
+          "මුළු භූමි ප්‍රමාණය ආසන්න වශයෙන් වර්ග කිලෝමීටර් 62,705 ක් වන අතර, ඉන් ගොඩබිම් ප්‍රමාණය වර්ග කිලෝමීටර් 60,000 ක් සහ අභ්‍යන්තර ජල ප්‍රමාණය වර්ග කිලෝමීටර් 2,705 කි.",
+          "මුළු භූමි ප්‍රමාණය ආසන්න වශයෙන් වර්ග කිලෝමීටර් 71,200 ක් වන අතර, ඉන් ගොඩබිම් ප්‍රමාණය වර්ග කිලෝමීටර් 68,100 ක් සහ අභ්‍යන්තර ජල ප්‍රමාණය වර්ග කිලෝමීටර් 3,100 කි."
+        ]
+      },
+      {
+        id: 17,
+        section: 2,
+        q: "ශ්‍රී ලංකාවේ කාලගුණ නිරීක්ෂණ මධ්‍යස්ථාන ජාලය සමන්විත වන්නේ කෙසේද?",
+        answer: "කාලගුණ විද්‍යා දෙපාර්තමේන්තුවේ ප්‍රධාන කාර්යාලයට අමතරව ප්‍රාදේශීය කාලගුණ මධ්‍යස්ථාන 22 ක්, ස්වයංක්‍රීය කාලගුණ නිරීක්ෂණ මධ්‍යස්ථාන 38 ක් සහ ස්වයංක්‍රීය වර්ෂාමාන මධ්‍යස්ථාන 20 ක් ඇතුළු නිරීක්ෂණ ජාලයක් ක්‍රියාත්මක වේ.",
+        options: [
+          "කාලගුණ විද්‍යා දෙපාර්තමේන්තුවේ ප්‍රධාන කාර්යාලයට අමතරව ප්‍රාදේශීය කාලගුණ මධ්‍යස්ථාන 22 ක්, ස්වයංක්‍රීය කාලගුණ නිරීක්ෂණ මධ්‍යස්ථාන 38 ක් සහ ස්වයංක්‍රීය වර්ෂාමාන මධ්‍යස්ථාන 20 ක් ඇතුළු නිරීක්ෂණ ජාලයක් ක්‍රියාත්මක වේ.",
+          "ප්‍රාදේශීය කාලගුණ මධ්‍යස්ථාන 15 ක් සහ ස්වයංක්‍රීය වර්ෂාමාන මධ්‍යස්ථාන 50 ක් පමණක් ක්‍රියාත්මක වේ.",
+          "දිස්ත්‍රික්ක 25 තුළම ස්වයංක්‍රීය කාලගුණ මධ්‍යස්ථාන 25 ක් පමණක් ක්‍රියාත්මක වේ.",
+          "ප්‍රාදේශීය කාලගුණ මධ්‍යස්ථාන 30 ක් සහ චන්ද්‍රිකා මධ්‍යස්ථාන 10 ක් ඇතුළු ජාලයක් ක්‍රියාත්මක වේ."
+        ]
+      },
+      {
+        id: 18,
+        section: 2,
+        q: "දකුණු ආසියාවේ දිගම වාරි උමං මාර්ගය හා ඇළ මාර්ගය සම්බන්ධ ව්‍යාපෘතිය කුමක්ද?",
+        answer: "මහවැලි ජල ආරක්ෂණ ආයෝජන වැඩසටහන යටතේ ඉදිකෙරෙන උතුරු මැද පළාත් ප්‍රධාන ඇළේ (North Central Province Main Canal) වාරි උමං මාර්ගය සහ කිලෝමීටර් 96 ක් දිග ඇළ මාර්ග ව්‍යාපෘතිය.",
+        options: [
+          "මහවැලි ජල ආරක්ෂණ ආයෝජන වැඩසටහන යටතේ ඉදිකෙරෙන උතුරු මැද පළාත් ප්‍රධාන ඇළේ (North Central Province Main Canal) වාරි උමං මාර්ගය සහ කිලෝමීටර් 96 ක් දිග ඇළ මාර්ග ව්‍යාපෘතිය.",
+          "කැලණි ගඟ වාරි සංවර්ධන ව්‍යාපෘතිය සහ කිලෝමීටර් 45 ක් දිග උමං මාර්ගය.",
+          "වලවේ ගඟ දකුණු ඉවුරු ඇළ ව්‍යාපෘතිය සහ කිලෝමීටර් 60 ක් දිග ඇළ මාර්ගය.",
+          "මල්වතු ඔය ජලාශ ව්‍යාපෘතිය සහ කිලෝමීටර් 30 ක් දිග උමං මාර්ගය."
+        ]
+      },
+      {
+        id: 19,
+        section: 2,
+        q: "කුඩා වැව් හා වාරි පද්ධති ප්‍රතිසංස්කරණය කිරීම සඳහා ශ්‍රී ලංකාවේ ක්‍රියාත්මක වන ජාතික වැඩසටහන කුමක්ද?",
+        answer: "“වාරි මහිම — අපේ උරුමය” (Wari Mahima - Our Heritage) ජාතික වැඩසටහන.",
+        options: [
+          "“වාරි මහිම — අපේ උරුමය” (Wari Mahima - Our Heritage) ජාතික වැඩසටහන.",
+          "“ගම සමඟ පිළිසඳර — වැව් සුරකිමු” වැඩසටහන.",
+          "“හරිත වාරි — ජල උරුමය” වැඩසටහන.",
+          "“මහවැලි සංරක්ෂණ — වැව් පුනරුත්ථාපන” වැඩසටහන."
+        ]
+      },
+      {
+        id: 20,
+        section: 2,
+        q: "ශ්‍රී ලංකාවේ වනාන්තර රක්ෂිත ලෙස ප්‍රකාශයට පත් කිරීමේ ජාතික වැඩසටහන කුමක්ද?",
+        answer: "පරිසර අමාත්‍යාංශය යටතේ 2025 දී ආරම්භ කරන ලද “වනස්පතී” (Vanaspathi) ජාතික වැඩසටහන.",
+        options: [
+          "පරිසර අමාත්‍යාංශය යටතේ 2025 දී ආරම්භ කරන ලද “වනස්පතී” (Vanaspathi) ජාතික වැඩසටහන.",
+          "“හරිත සෙවණ” ජාතික වන වගා වැඩසටහන.",
+          "“සිංහරාජ රක්ෂණ” ජාතික වැඩසටහන.",
+          "“පරිසර උරුමය” ජාතික වැඩසටහන."
+        ]
+      },
+
+      // Section 3: 21-22
+      {
+        id: 21,
+        section: 3,
+        q: "ශ්‍රී ලංකා පාර්ලිමේන්තුවේ රාජ්‍ය ව්‍යවසාය පිළිබඳ කාරක සභාවේ (COPE) සභාපතිවරයා ලෙස 2025 ජනවාරි මාසයේදී ඒකමතිකව තේරී පත් වූයේ කවුද?",
+        answer: "පාර්ලිමේන්තු මන්ත්‍රී වෛද්‍ය නිශාන්ත සමරවීර මහතා.",
+        options: [
+          "පාර්ලිමේන්තු මන්ත්‍රී වෛද්‍ය නිශාන්ත සමරවීර මහතා.",
+          "පාර්ලිමේන්තු මන්ත්‍රී චරිත හේරත් මහතා.",
+          "පාර්ලිමේන්තු මන්ත්‍රී රංජිත් බණ්ඩාර මහතා.",
+          "පාර්ලිමේන්තු මන්ත්‍රී හර්ෂ ද සිල්වා මහතා."
+        ]
+      },
+      {
+        id: 22,
+        section: 3,
+        q: "රාජ්‍ය සේවා සහ ආයතන ගෙවීම් පහසු කිරීම සඳහා ශ්‍රී ලංකාවේ හඳුන්වා දුන් ඩිජිටල් ගෙවීම් වේදිකාව කුමක්ද?",
+        answer: "ගව්පේ (GovPay).",
+        options: [
+          "ගව්පේ (GovPay).",
+          "ලංකාපේ (LankaPay).",
+          "සිලෝන්පේ (CeylonPay).",
+          "ඩිජිටල්පේ (DigitalPay)."
+        ]
+      },
+
+      // Section 4: 23-27
+      {
+        id: 23,
+        section: 4,
+        q: "ජාත්‍යන්තර මේස පන්දු ශ්‍රේණිගත කිරීම්වල (අවුරුදු 11 න් පහළ කාණ්ඩය) ඉහළම ශ්‍රේණිගත කිරීමක් ලබා ගනිමින් 6 වන ස්ථානයට සහ පසුව ලෝක අංක 1 ස්ථානයට පත් වූ ශ්‍රී ලාංකික ක්‍රීඩකයා කවුද?",
+        answer: "තවී සමරවීර (Thawee / Taavi Samaraweera).",
+        options: [
+          "තවී සමරවීර (Thawee / Taavi Samaraweera).",
+          "නිමේෂ් රණසිංහ.",
+          "කවිඳු ද සිල්වා.",
+          "රොහාන් ප්‍රනාන්දු."
+        ]
+      },
+      {
+        id: 24,
+        section: 4,
+        q: "2025 වයස අවුරුදු 19 න් පහළ කාන්තා T20 ලෝක කුසලාන තරගාවලිය සඳහා ශ්‍රී ලංකා සංචිතය නම් කළ අතර එහි නායිකාව වූයේ කවුද?",
+        answer: "මනුදි නානායක්කාර (නායිකාව) සහ උපනායිකාව රශ්මිකා සෙව්වන්දි විය.",
+        options: [
+          "මනුදි නානායක්කාර (නායිකාව) සහ උපනායිකාව රශ්මිකා සෙව්වන්දි විය.",
+          "චමරි අතපත්තු (නායිකාව) සහ උපනායිකාව හර්ෂිතා සමරවික්‍රම විය.",
+          "විශ්මි ගුණරත්න (නායිකාව) සහ උපනායිකාව කවීෂා දිල්හාරි විය.",
+          "නිලක්ෂි ද සිල්වා (නායිකාව) සහ උපනායිකාව ඉනෝකා රණවීර විය."
+        ]
+      },
+      {
+        id: 25,
+        section: 4,
+        q: "වයස අවුරුදු 19 න් පහළ කාන්තා T20 ලෝක කුසලාන ඉතිහාසයේ මංගල ශතකය රැස් කළ ක්‍රීඩිකාව කවුද?",
+        answer: "ඉන්දියාවේ ගොංගඩි ත්‍රිෂා (Gongadi Trisha — 2025 ජනවාරි 28 දින ස්කොට්ලන්තයට එරෙහිව නොදැවී ලකුණු 110 ක්).",
+        options: [
+          "ඉන්දියාවේ ගොංගඩි ත්‍රිෂා (Gongadi Trisha — 2025 ජනවාරි 28 දින ස්කොට්ලන්තයට එරෙහිව නොදැවී ලකුණු 110 ක්).",
+          "ශ්‍රී ලංකාවේ මනුදි නානායක්කාර (ලකුණු 104).",
+          "ඕස්ට්‍රේලියාවේ ෆීබි ලිච්ෆීල්ඩ් (ලකුණු 102).",
+          "එංගලන්තයේ ඇලිස් කැප්සි (ලකුණු 108)."
+        ]
+      },
+      {
+        id: 26,
+        section: 4,
+        q: "2024 ICC සම්මාන උළෙලේදී (2025 ජනවාරියේ ප්‍රකාශයට පත් කළ) වසරේ නැගී එන පිරිමි ක්‍රිකට් ක්‍රීඩකයා ලෙස සම්මාන දිනූ ශ්‍රී ලාංකික ක්‍රීඩකයා කවුද?",
+        answer: "කමිඳු මෙන්ඩිස්.",
+        options: [
+          "කමිඳු මෙන්ඩිස්.",
+          "පැතුම් නිස්සංක.",
+          "දුනිත් වෙල්ලාලගේ.",
+          "මතීෂ පතිරණ."
+        ]
+      },
+      {
+        id: 27,
+        section: 4,
+        q: "T20 ක්‍රිකට් පිටියේ කඩුලු 300 ක් දවා ගත් ප්‍රථම ශ්‍රී ලාංකික පන්දු යවන්නා කවුද?",
+        answer: "වනිඳු හසරංග (2025 ජනවාරි 23 දින ILT20 තරගයකදී).",
+        options: [
+          "වනිඳු හසරංග (2025 ජනවාරි 23 දින ILT20 තරගයකදී).",
+          "ලසිත් මාලිංග.",
+          "අජන්ත මෙන්ඩිස්.",
+          "නුවන් තුෂාර."
+        ]
+      },
+
+      // Section 5: 28-29
+      {
+        id: 28,
+        section: 5,
+        q: "1970 දශකයේ තේ අපනයන ඒකාධිකාරය පැවති රාජ්‍ය වෙළඳ සංස්ථාවේ (Consolexpo) තේ දෙපාර්තමේන්තුවේ ප්‍රධානියා ලෙස කටයුතු කළ සහ 2025 පෙබරවාරි 3 දින අභාවප්‍රාප්ත වූ ප්‍රමුඛ ව්‍යාපාරිකයා කවුද?",
+        answer: "දේශමාන්‍ය හැරී ජයවර්ධන මහතා.",
+        options: [
+          "දේශමාන්‍ය හැරී ජයවර්ධන මහතා.",
+          "දේශමාන්‍ය කෙන් බාලේන්ද්‍ර මහතා.",
+          "මෙරිල් ජේ. ප්‍රනාන්දු මහතා.",
+          "නවීන් ජයසූරිය මහතා."
+        ]
+      },
+      {
+        id: 29,
+        section: 5,
+        q: "ජෝන් කීල්ස් හෝල්ඩින්ස් (John Keells Holdings) ආයතනයේ ප්‍රථම ශ්‍රී ලාංකික සභාපතිවරයා ලෙස කටයුතු කළ සහ 2025 පෙබරවාරි 3 දින අභාවප්‍රාප්ත වූ ප්‍රකට ව්‍යාපාරික නායකයා කවුද?",
+        answer: "දේශමාන්‍ය කන්දයියා “කෙන්” බාලේන්ද්‍ර මහතා.",
+        options: [
+          "දේශමාන්‍ය කන්දයියා “කෙන්” බාලේන්ද්‍ර මහතා.",
+          "දේශමාන්‍ය හැරී ජයවර්ධන මහතා.",
+          "සුසන්ත රත්නායක මහතා.",
+          "අජිත් ගුණවර්ධන මහතා."
+        ]
+      },
+
+      // Section 6: 30-45
+      {
+        id: 30,
+        section: 6,
+        q: "2024 දෙසැම්බර් මාසයේ නත්තල් වෙළඳපොළකට වාහනයකින් පහර දීමේ සිද්ධිය සිදු වූ ජර්මානු නගරය කුමක්ද?",
+        answer: "මැග්ඩෙබර්ග් (Magdeburg — 2024 දෙසැම්බර් 20).",
+        options: [
+          "මැග්ඩෙබර්ග් (Magdeburg — 2024 දෙසැම්බර් 20).",
+          "බර්ලින් (Berlin).",
+          "මියුනිච් (Munich).",
+          "හැම්බර්ග් (Hamburg)."
+        ]
+      },
+      {
+        id: 31,
+        section: 6,
+        q: "2025 ජනවාරි 1 වන දින ඇමරිකා එක්සත් ජනපදයේ නිව් ඔර්ලියන්ස් නගරයේ බර්බන් වීදියේ සිදු වූ ට්‍රක් රථ ප්‍රහාරය සම්බන්ධයෙන් FBI විසින් විමර්ශනය කළ අන්තවාදී සංවිධාන ආශ්‍රය කුමක්ද?",
+        answer: "ISIS සංවිධානයෙන් ආභාසය ලැබූ ත්‍රස්ත ප්‍රහාරයක් ලෙස FBI විසින් තහවුරු කරන ලදී.",
+        options: [
+          "ISIS සංවිධානයෙන් ආභාසය ලැබූ ත්‍රස්ත ප්‍රහාරයක් ලෙස FBI විසින් තහවුරු කරන ලදී.",
+          "සයිබර් හැකර් කණ්ඩායමක ක්‍රියාවක් ලෙස තහවුරු කරන ලදී.",
+          "ප්‍රාදේශීය කල්ලි ගැටුමක් ලෙස වාර්තා විය.",
+          "විදේශ රාජ්‍ය ඔත්තු සේවයක ක්‍රියාවක් ලෙස නම් කරන ලදී."
+        ]
+      },
+      {
+        id: 32,
+        section: 6,
+        q: "21 වන සියවසේ මාරාන්තික ගුවන් අනතුරු අතරින් 2025 ජූනි 12 දින අහමදාබාද් හිදී සිදු වූ එයාර් ඉන්ඩියා 171 (Air India Flight 171) ගුවන් අනතුර සිදු වූ රට කුමක්ද?",
+        answer: "ඉන්දියාව (අහමදාබාද් සිට ලන්ඩන් ගැට්වික් බලා පියාසර කළ බෝයිං 787-8 ඩ්‍රීම්ලයිනර් යානය).",
+        options: [
+          "ඉන්දියාව (අහමදාබාද් සිට ලන්ඩන් ගැට්වික් බලා පියාසර කළ බෝයිං 787-8 ඩ්‍රීම්ලයිනර් යානය).",
+          "එක්සත් රාජධානිය.",
+          "එක්සත් අරාබි එමීර් රාජ්‍යය.",
+          "නේපාලය."
+        ]
+      },
+      {
+        id: 33,
+        section: 6,
+        q: "2025 මැයි මාසයේදී එක්සත් ජනපද ශ්‍රේෂ්ඨාධිකරණ තීන්දුවකට අනුව තාවකාලික ආරක්ෂිත තත්ත්වය අවලංගු කිරීමට ලක් වූ ප්‍රධාන සංක්‍රමණික කණ්ඩායම කුමක්ද?",
+        answer: "වෙනිසියුලානු සංක්‍රමණිකයින් ආසන්න වශයෙන් 350,000 ක පිරිසක්.",
+        options: [
+          "වෙනිසියුලානු සංක්‍රමණිකයින් ආසන්න වශයෙන් 350,000 ක පිරිසක්.",
+          "හයිටි සංක්‍රමණිකයින් 100,000 ක පිරිසක්.",
+          "කියුබානු සංක්‍රමණිකයින් 200,000 ක පිරිසක්.",
+          "එල් සැල්වදෝර සංක්‍රමණිකයින් 150,000 ක පිරිසක්."
+        ]
+      },
+      {
+        id: 34,
+        section: 6,
+        q: "2024 අගභාගයේ හදිසි යුද නීතිය පැනවීමෙන් පසු දෝෂාභියෝගයට ලක්ව, අත්අඩංගුවට ගෙන, අපරාධ නඩු විභාගයකට මුහුණ දුන් දකුණු කොරියානු ජනාධිපතිවරයා කවුද?",
+        answer: "යූන් සුක් යෙයෝල් (Yoon Suk Yeol).",
+        options: [
+          "යූන් සුක් යෙයෝල් (Yoon Suk Yeol).",
+          "මූන් ජේ-ඉන් (Moon Jae-in).",
+          "ලී ජේ-මියුං (Lee Jae-myung).",
+          "පාක් ගුන්-හේ (Park Geun-hye)."
+        ]
+      },
+      {
+        id: 35,
+        section: 6,
+        q: "බංග්ලාදේශයේ අන්තර්වාර රජයේ ප්‍රධාන උපදේශක ලෙස පත් වූ නොබෙල් සාම ත්‍යාගලාභියා කවුද?",
+        answer: "මහාචාර්ය මුහම්මද් යුනුස් (Muhammad Yunus).",
+        options: [
+          "මහාචාර්ය මුහම්මද් යුනුස් (Muhammad Yunus).",
+          "ෂෙයික් හසීනා.",
+          "කලීඩා ෂියා.",
+          "මිර්සා ෆක්රුල් ඉස්ලාම් අලම්ගීර්."
+        ]
+      },
+      {
+        id: 36,
+        section: 6,
+        q: "අල්-ෂබාබ් (al-Shabaab) සන්නද්ධ කණ්ඩායම ප්‍රධාන වශයෙන් ක්‍රියාත්මක වන රට කුමක්ද?",
+        answer: "සෝමාලියාව.",
+        options: [
+          "සෝමාලියාව.",
+          "නයිජීරියාව.",
+          "ඇෆ්ගනිස්ථානය.",
+          "යේමනය."
+        ]
+      },
+      {
+        id: 37,
+        section: 6,
+        q: "2025 ජාත්‍යන්තර බුකර් සම්මානය (International Booker Prize) දිනා ගත් ‘Heart Lamp’ කෘතියේ කතුවරිය කවුද?",
+        answer: "බානු මුෂ්තාක් (Banu Mushtaq — ඉංග්‍රීසි පරිවර්තනය දීපා භාස්ති විසිනි).",
+        options: [
+          "බානු මුෂ්තාක් (Banu Mushtaq — ඉංග්‍රීසි පරිවර්තනය දීපා භාස්ති විසිනි).",
+          "ගීතාංජලී ශ්‍රී.",
+          "අරුන්දතී රෝයි.",
+          "මීවා කුමාරි."
+        ]
+      },
+      {
+        id: 38,
+        section: 6,
+        q: "වසර 53 කට පසු 2025 මැයි මාසයේදී පෘථිවි කක්ෂයෙන් ඉවත්ව පෘථිවියට / ඉන්දියන් සාගරයට කඩා වැටුණු 1972 සෝවියට් සිකුරු ගවේෂණ යානයේ අවසන් කොටස කුමක්ද?",
+        answer: "කොස්මොස් 482 (Kosmos 482) අවරෝහණ මොඩියුලය.",
+        options: [
+          "කොස්මොස් 482 (Kosmos 482) අවරෝහණ මොඩියුලය.",
+          "වෙනෙරා 7 (Venera 7) කැප්සියුලය.",
+          "ස්පුට්නික් 2 (Sputnik 2) මොඩියුලය.",
+          "සැලියුට් 1 (Salyut 1) මොඩියුලය."
+        ]
+      },
+      {
+        id: 39,
+        section: 6,
+        q: "2025 මැයි මාසයේදී ඉන්දියාවේ PSLV-C61 රොකට්ටුවේ තෙවන අදියරේ දෝෂයක් හේතුවෙන් අහිමි වූ පෘථිවි නිරීක්ෂණ චන්ද්‍රිකාව කුමක්ද?",
+        answer: "EOS-09 චන්ද්‍රිකාව.",
+        options: [
+          "EOS-09 චන්ද්‍රිකාව.",
+          "Cartosat-3 චන්ද්‍රිකාව.",
+          "RISAT-2B චන්ද්‍රිකාව.",
+          "Aditya-L1 යානය."
+        ]
+      },
+      {
+        id: 40,
+        section: 6,
+        q: "චීනයේ ප්‍රථම ග්‍රහක සාම්පල නැවත ගෙන ඒමේ මෙහෙයුමේ නම කුමක්ද?",
+        answer: "ටියැන්වෙන්-2 (Tianwen-2 — 469219 කමෝ'ඕලේවා ග්‍රහකය ඉලක්ක කරගත් මෙහෙයුම).",
+        options: [
+          "ටියැන්වෙන්-2 (Tianwen-2 — 469219 කමෝ'ඕලේවා ග්‍රහකය ඉලක්ක කරගත් මෙහෙයුම).",
+          "චැං'ඊ-6 (Chang'e-6).",
+          "ටියැන්ගොං-1 (Tiangong-1).",
+          "ෂෙන්ෂෝ-19 (Shenzhou-19)."
+        ]
+      },
+      {
+        id: 41,
+        section: 6,
+        q: "තායිලන්තයේ අග්‍රාමාත්‍ය ධුරයෙන් අත්හිටුවීමට සහ පසුව ව්‍යවස්ථාදායක අධිකරණය මගින් ඉවත් කිරීමට හේතු වූ සිදුවීම කුමක්ද?",
+        answer: "කාම්බෝජ සෙනෙට් සභාපති හුන් සෙන් සමඟ පැවැති දුරකථන සංවාදයක් කාන්දු වීම සම්බන්ධ නඩුව (අග්‍රාමාත්‍ය පේටොංටාන් ෂිනවත්‍රා).",
+        options: [
+          "කාම්බෝජ සෙනෙට් සභාපති හුන් සෙන් සමඟ පැවැති දුරකථන සංවාදයක් කාන්දු වීම සම්බන්ධ නඩුව (අග්‍රාමාත්‍ය පේටොංටාන් ෂිනවත්‍රා).",
+          "මැතිවරණ වියදම් වාර්තා සඟවා තැබීමේ නඩුව.",
+          "දේශසීමා ගිවිසුමක් පාර්ලිමේන්තුවට ඉදිරිපත් නොකිරීමේ නඩුව.",
+          "මධ්‍යම බැංකු සභාපතිවරයා බලහත්කාරයෙන් ඉවත් කිරීමේ නඩුව."
+        ]
+      },
+      {
+        id: 42,
+        section: 6,
+        q: "2025 ජූනි මාසයේදී ඉරානයේ න්‍යෂ්ටික මධ්‍යස්ථාන (ෆෝඩෝ, නටාන්ස් සහ ඉස්ෆහාන්) ඉලක්ක කර එක්සත් ජනපදය සිදු කළ හමුදා මෙහෙයුම හැඳින්වූ නම කුමක්ද?",
+        answer: "ඔපරේෂන් මිඩ්නයිට් හැමර් (Operation Midnight Hammer).",
+        options: [
+          "ඔපරේෂන් මිඩ්නයිට් හැමර් (Operation Midnight Hammer).",
+          "ඔපරේෂන් ඩෙසර්ට් ස්ටෝම් (Operation Desert Storm).",
+          "ඔපරේෂන් රයිසින් ලයන් (Operation Rising Lion).",
+          "ඔපරේෂන් සන්රයිස් (Operation Sunrise)."
+        ]
+      },
+      {
+        id: 43,
+        section: 6,
+        q: "ජාත්‍යන්තර පරමාණුක බලශක්ති ඒජන්සියේ කෙටි යෙදුම කුමක්ද?",
+        answer: "IAEA (International Atomic Energy Agency).",
+        options: [
+          "IAEA (International Atomic Energy Agency).",
+          "WHO (World Health Organization).",
+          "ICAO (International Civil Aviation Organization).",
+          "WTO (World Trade Organization)."
+        ]
+      },
+      {
+        id: 44,
+        section: 6,
+        q: "ලොව වැඩිම තහවුරු කළ බොරතෙල් සංචිත ඇති රට ලෙස සැලකෙන්නේ කුමක්ද?",
+        answer: "වෙනිසියුලාව.",
+        options: [
+          "වෙනිසියුලාව.",
+          "සෞදි අරාබිය.",
+          "ඉරානය.",
+          "කැනඩාව."
+        ]
+      },
+      {
+        id: 45,
+        section: 6,
+        q: "2025 මැයි මාසයේදී තේරී පත් වූ 14 වන ලියෝ පාප් වහන්සේගේ (Pope Leo XIV) මුල් නම සහ පුරවැසිභාවය කුමක්ද?",
+        answer: "රොබර්ට් ෆ්‍රැන්සිස් ප්‍රෙවොස්ට් (Robert Francis Prevost — ඇමරිකා එක්සත් ජනපද / පේරු පුරවැසිභාවය).",
+        options: [
+          "රොබර්ට් ෆ්‍රැන්සිස් ප්‍රෙවොස්ට් (Robert Francis Prevost — ඇමරිකා එක්සත් ජනපද / පේරු පුරවැසිභාවය).",
+          "ජෝර්ජ් මාරියෝ බර්ගොග්ලියෝ (ආර්ජන්ටිනාව).",
+          "ජෝසප් ඇලොයිසියස් රැට්සිංගර් (ජර්මනිය).",
+          "පියෙත්රෝ පැරොලින් (ඉතාලිය)."
+        ]
+      },
+
+      // Section 7: 46-174
+      {
+        id: 46,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ පරිපාලන දිස්ත්‍රික්ක සංඛ්‍යාව කීයද?",
+        answer: "දිස්ත්‍රික්ක 25 කි (පළාත් 9 ක් යටතේ).",
+        options: [
+          "දිස්ත්‍රික්ක 25 කි (පළාත් 9 ක් යටතේ).",
+          "දිස්ත්‍රික්ක 22 කි (පළාත් 8 ක් යටතේ).",
+          "දිස්ත්‍රික්ක 24 කි (පළාත් 9 ක් යටතේ).",
+          "දිස්ත්‍රික්ක 26 කි (පළාත් 7 ක් යටතේ)."
+        ]
+      },
+      {
+        id: 47,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ව්‍යවස්ථාදායක අගනුවර සහ වාණිජ අගනුවර මොනවාද?",
+        answer: "ශ්‍රී ජයවර්ධනපුර කෝට්ටේ (පරිපාලන / ව්‍යවස්ථාදායක අගනුවර) සහ කොළඹ (වාණිජ අගනුවර).",
+        options: [
+          "ශ්‍රී ජයවර්ධනපුර කෝට්ටේ (පරිපාලන / ව්‍යවස්ථාදායක අගනුවර) සහ කොළඹ (වාණිජ අගනුවර).",
+          "කොළඹ (පරිපාලන අගනුවර) සහ මහනුවර (වාණිජ අගනුවර).",
+          "මහනුවර (ව්‍යවස්ථාදායක අගනුවර) සහ ගාල්ල (වාණිජ අගනුවර).",
+          "අනුරාධපුරය (පරිපාලන අගනුවර) සහ කොළඹ (වාණිජ අගනුවර)."
+        ]
+      },
+      {
+        id: 48,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ උසම කඳු මුදුන කුමක්ද සහ එහි උස කොපමණද?",
+        answer: "පිදුරුතලාගල කන්ද (මීටර 2,524 ක් / අඩි 8,281 ක්).",
+        options: [
+          "පිදුරුතලාගල කන්ද (මීටර 2,524 ක් / අඩි 8,281 ක්).",
+          "ශ්‍රී පාදය / සමනල කන්ද (මීටර 2,243 ක් / අඩි 7,359 ක්).",
+          "කිරිගල්පොත්ත කන්ද (මීටර 2,388 ක් / අඩි 7,835 ක්).",
+          "නමුණුකුල කන්ද (මීටර 2,036 ක් / අඩි 6,680 ක්)."
+        ]
+      },
+      {
+        id: 49,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ වෙරළ තීරයේ දළ දිග කොපමණද?",
+        answer: "ආසන්න වශයෙන් කිලෝමීටර් 1,785 කි.",
+        options: [
+          "ආසන්න වශයෙන් කිලෝමීටර් 1,785 කි.",
+          "ආසන්න වශයෙන් කිලෝමීටර් 1,120 කි.",
+          "ආසන්න වශයෙන් කිලෝමීටර් 2,450 කි.",
+          "ආසන්න වශයෙන් කිලෝමීටර් 950 කි."
+        ]
+      },
+      {
+        id: 50,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ මුළු ජනගහනය (2024 සංගණනය අනුව) කොපමණද?",
+        answer: "21,763,170 කි.",
+        options: [
+          "21,763,170 කි.",
+          "20,359,439 කි.",
+          "22,890,115 කි.",
+          "19,845,600 කි."
+        ]
+      },
+      {
+        id: 51,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ වේලා කලාපය (UTC) කුමක්ද?",
+        answer: "UTC+05:30 (ශ්‍රී ලංකා සම්මත වේලාව).",
+        options: [
+          "UTC+05:30 (ශ්‍රී ලංකා සම්මත වේලාව).",
+          "UTC+05:00.",
+          "UTC+06:00.",
+          "UTC+04:30."
+        ]
+      },
+      {
+        id: 52,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන මෝසම් සුළං වර්ග දෙක මොනවාද?",
+        answer: "නිරිතදිග මෝසම (මැයි–සැප්තැම්බර් / ජූනි–ඔක්තෝබර්) සහ ඊසානදිග මෝසම (දෙසැම්බර්–පෙබරවාරි/මාර්තු).",
+        options: [
+          "නිරිතදිග මෝසම (මැයි–සැප්තැම්බර් / ජූනි–ඔක්තෝබර්) සහ ඊසානදිග මෝසම (දෙසැම්බර්–පෙබරවාරි/මාර්තු).",
+          "වයඹ මෝසම සහ ගිනිකොන මෝසම.",
+          "උතුරු මෝසම සහ දකුණු මෝසම.",
+          "ගිම්හාන මෝසම සහ සරත් මෝසම."
+        ]
+      },
+      {
+        id: 53,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන ආහාර භෝගය වන්නේ කුමක්ද?",
+        answer: "වී (සහල්).",
+        options: [
+          "වී (සහල්).",
+          "තිරිඟු.",
+          "බඩඉරිඟු.",
+          "මඤ්ඤොක්කා."
+        ]
+      },
+      {
+        id: 54,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ මධ්‍යම බැංකුව හැඳුන්වනු ලබන්නේ කුමන නමකින්ද?",
+        answer: "ශ්‍රී ලංකා මහ බැංකුව (Central Bank of Sri Lanka - CBSL).",
+        options: [
+          "ශ්‍රී ලංකා මහ බැංකුව (Central Bank of Sri Lanka - CBSL).",
+          "ශ්‍රී ලංකා ජාතික බැංකුව.",
+          "ලංකා මූල්‍ය සංස්ථාව.",
+          "ශ්‍රී ලංකා රාජ්‍ය බැංකුව."
+        ]
+      },
+      {
+        id: 55,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ නිල මුදල් ඒකකය කුමක්ද?",
+        answer: "ශ්‍රී ලංකා රුපියල (LKR / Rs.).",
+        options: [
+          "ශ්‍රී ලංකා රුපියල (LKR / Rs.).",
+          "ශ්‍රී ලංකා ඩොලරය.",
+          "ලංකා යුවාන්.",
+          "සිලෝන් ෆ්‍රෑන්ක්."
+        ]
+      },
+      {
+        id: 56,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ නිල භාෂා මොනවාද?",
+        answer: "සිංහල සහ දෙමළ (ඉංග්‍රීසි සම්බන්ධක භාෂාව ලෙස භාවිත වේ).",
+        options: [
+          "සිංහල සහ දෙමළ (ඉංග්‍රීසි සම්බන්ධක භාෂාව ලෙස භාවිත වේ).",
+          "සිංහල, දෙමළ සහ ඉංග්‍රීසි තුනම නිල භාෂා වේ.",
+          "සිංහල පමණි.",
+          "සිංහල සහ පාලි."
+        ]
+      },
+      {
+        id: 57,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ පාර්ලිමේන්තුව තේරී පත් වන්නේ කුමන මැතිවරණ ක්‍රමය යටතේද?",
+        answer: "සමානුපාතික නියෝජන ක්‍රමය යටතේ.",
+        options: [
+          "සමානුපාතික නියෝජන ක්‍රමය යටතේ.",
+          "කේවල ඡන්ද ක්‍රමය යටතේ පමණි.",
+          "වක්‍ර ඡන්ද ක්‍රමය යටතේ.",
+          "පත් කිරීමේ ක්‍රමය යටතේ."
+        ]
+      },
+      {
+        id: 58,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ විධායක ජනාධිපතිවරයා තේරී පත් වන්නේ කෙසේද?",
+        answer: "ජනතා ඡන්දයෙන්.",
+        options: [
+          "ජනතා ඡන්දයෙන්.",
+          "පාර්ලිමේන්තු මන්ත්‍රීවරුන්ගේ ඡන්දයෙන් පමණි.",
+          "අග්‍රාමාත්‍යවරයා විසින් පත් කිරීමෙන්.",
+          "පළාත් සභා මගින්."
+        ]
+      },
+      {
+        id: 59,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන ඛනිජ සම්පත් කිහිපයක් නම් කරන්න.",
+        answer: "මිනිරන් (Graphite), මැණික්, ඛනිජ වැලි, හුණුගල් සහ රොක් පොස්පේට්.",
+        options: [
+          "මිනිරන් (Graphite), මැණික්, ඛනිජ වැලි, හුණුගල් සහ රොක් පොස්පේට්.",
+          "බොරතෙල්, ගල් අඟුරු, යකඩ සහ රත්රන්.",
+          "යුරේනියම්, තඹ, ඊයම් සහ ටින්.",
+          "ප්ලැටිනම්, සින්ක්, බොක්සයිට් සහ සල්ෆර්."
+        ]
+      },
+      {
+        id: 60,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ දිගම ගංගාව කුමක්ද?",
+        answer: "මහවැලි ගඟ (ආසන්න වශයෙන් කිලෝමීටර් 335 ක් දිගය).",
+        options: [
+          "මහවැලි ගඟ (ආසන්න වශයෙන් කිලෝමීටර් 335 ක් දිගය).",
+          "කැලණි ගඟ (ආසන්න වශයෙන් කිලෝමීටර් 145 ක් දිගය).",
+          "කළු ගඟ (ආසන්න වශයෙන් කිලෝමීටර් 129 ක් දිගය).",
+          "වලවේ ගඟ (ආසන්න වශයෙන් කිලෝමීටර් 138 ක් දිගය)."
+        ]
+      },
+      {
+        id: 61,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ විශාලතම ජාතික වනෝද්‍යානය කුමක්ද?",
+        answer: "විල්පත්තු ජාතික වනෝද්‍යානය.",
+        options: [
+          "විල්පත්තු ජාතික වනෝද්‍යානය.",
+          "යාල ජාතික වනෝද්‍යානය.",
+          "උඩවලව ජාතික වනෝද්‍යානය.",
+          "කුමන ජාතික වනෝද්‍යානය."
+        ]
+      },
+      {
+        id: 62,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ස්වාභාවික වරායන් පිහිටා ඇති ප්‍රධාන නගර මොනවාද?",
+        answer: "ත්‍රිකුණාමලය සහ ගාල්ල.",
+        options: [
+          "ත්‍රිකුණාමලය සහ ගාල්ල.",
+          "කොළඹ සහ හම්බන්තොට.",
+          "මීගමුව සහ කල්පිටිය.",
+          "මඩකලපුව සහ මන්නාරම."
+        ]
+      },
+      {
+        id: 63,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන වාණිජ වරාය කුමක්ද?",
+        answer: "කොළඹ වරාය.",
+        options: [
+          "කොළඹ වරාය.",
+          "ගාල්ල වරාය.",
+          "කන්කසන්තුරය වරාය.",
+          "පේදුරුතුඩුව වරාය."
+        ]
+      },
+      {
+        id: 64,
+        section: 7,
+        q: "හම්බන්තොට වරාය පිහිටා ඇත්තේ ශ්‍රී ලංකාවේ කුමන දිස්ත්‍රික්කයේද?",
+        answer: "හම්බන්තොට දිස්ත්‍රික්කයේ.",
+        options: [
+          "හම්බන්තොට දිස්ත්‍රික්කයේ.",
+          "මාතර දිස්ත්‍රික්කයේ.",
+          "ගාල්ල දිස්ත්‍රික්කයේ.",
+          "මොණරාගල දිස්ත්‍රික්කයේ."
+        ]
+      },
+      {
+        id: 65,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රධාන ජාත්‍යන්තර ගුවන් තොටුපළ කුමක්ද?",
+        answer: "බණ්ඩාරනායක ජාත්‍යන්තර ගුවන් තොටුපළ (කටුනායක).",
+        options: [
+          "බණ්ඩාරනායක ජාත්‍යන්තර ගුවන් තොටුපළ (කටුනායක).",
+          "මත්තල රාජපක්ෂ ජාත්‍යන්තර ගුවන් තොටුපළ.",
+          "රත්මලාන ගුවන් තොටුපළ.",
+          "පලාලි ගුවන් තොටුපළ."
+        ]
+      },
+      {
+        id: 66,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ දකුණු පළාතේ පිහිටි ජාත්‍යන්තර ගුවන් තොටුපළ කුමක්ද?",
+        answer: "මත්තල රාජපක්ෂ ජාත්‍යන්තර ගුවන් තොටුපළ.",
+        options: [
+          "මත්තල රාජපක්ෂ ජාත්‍යන්තර ගුවන් තොටුපළ.",
+          "බණ්ඩාරනායක ජාත්‍යන්තර ගුවන් තොටුපළ.",
+          "හිඟුරක්ගොඩ ගුවන් තොටුපළ.",
+          "වවුනියා ගුවන් තොටුපළ."
+        ]
+      },
+      {
+        id: 67,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රථම අග්‍රාමාත්‍යවරයා කවුද?",
+        answer: "ඩී. එස්. සේනානායක මහතා.",
+        options: [
+          "ඩී. එස්. සේනානායක මහතා.",
+          "එස්. ඩබ්ලිව්. ආර්. ඩී. බණ්ඩාරනායක මහතා.",
+          "ඩඩ්ලි සේනානායක මහතා.",
+          "ශ්‍රීමාවෝ බණ්ඩාරනායක මැතිනිය."
+        ]
+      },
+      {
+        id: 68,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ප්‍රථම විධායක ජනාධිපතිවරයා කවුද?",
+        answer: "ජේ. ආර්. ජයවර්ධන මහතා.",
+        options: [
+          "ජේ. ආර්. ජයවර්ධන මහතා.",
+          "විලියම් ගොපල්ලව මහතා.",
+          "ආර්. ප්‍රේමදාස මහතා.",
+          "ඩී. බී. විජේතුංග මහතා."
+        ]
+      },
+      {
+        id: 69,
+        section: 7,
+        q: "ලෝකයේ ප්‍රථම අග්‍රාමාත්‍යවරිය කවුද?",
+        answer: "සිරිමාවෝ ආර්. ඩී. බණ්ඩාරනායක මැතිනිය.",
+        options: [
+          "සිරිමාවෝ ආර්. ඩී. බණ්ඩාරනායක මැතිනිය.",
+          "ඉන්දිරා ගාන්ධි මැතිනිය.",
+          "මාග්‍රට් තැචර් මැතිනිය.",
+          "ගෝල්ඩා මියර් මැතිනිය."
+        ]
+      },
+      {
+        id: 70,
+        section: 7,
+        q: "ශ්‍රී ලංකාව නිදහස ලැබූ දිනය කුමක්ද?",
+        answer: "1948 පෙබරවාරි 4.",
+        options: [
+          "1948 පෙබරවාරි 4.",
+          "1947 අගෝස්තු 15.",
+          "1972 මැයි 22.",
+          "1978 සැප්තැම්බර් 7."
+        ]
+      },
+      {
+        id: 71,
+        section: 7,
+        q: "ශ්‍රී ලංකාව ජනරජයක් බවට පත් වූ වර්ෂය කුමක්ද?",
+        answer: "1972 (පළමු ජනරජ ආණ්ඩුක්‍රම ව්‍යවස්ථාව).",
+        options: [
+          "1972 (පළමු ජනරජ ආණ්ඩුක්‍රම ව්‍යවස්ථාව).",
+          "1948.",
+          "1978.",
+          "1956."
+        ]
+      },
+      {
+        id: 72,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ වත්මන් ආණ්ඩුක්‍රම ව්‍යවස්ථාව සම්මත කරන ලද වර්ෂය කුමක්ද?",
+        answer: "1978 (දෙවන ජනරජ ආණ්ඩුක්‍රම ව්‍යවස්ථාව).",
+        options: [
+          "1978 (දෙවන ජනරජ ආණ්ඩුක්‍රම ව්‍යවස්ථාව).",
+          "1972.",
+          "1947 (සෝල්බරි ව්‍යවස්ථාව).",
+          "1987."
+        ]
+      },
+      {
+        id: 73,
+        section: 7,
+        q: "ශ්‍රී ලංකාව එක්සත් ජාතීන්ගේ සංවිධානයේ සාමාජිකත්වය ලබා ගත් වර්ෂය කුමක්ද?",
+        answer: "1955.",
+        options: [
+          "1955.",
+          "1948.",
+          "1960.",
+          "1971."
+        ]
+      },
+      {
+        id: 74,
+        section: 7,
+        q: "ශ්‍රී ලංකාව පොදුරාජ්‍ය මණ්ඩලයේ සාමාජික රටක්ද?",
+        answer: "ඔව්, ශ්‍රී ලංකාව පොදුරාජ්‍ය මණ්ඩලයේ සාමාජික රටකි.",
+        options: [
+          "ඔව්, ශ්‍රී ලංකාව පොදුරාජ්‍ය මණ්ඩලයේ සාමාජික රටකි.",
+          "නැත, ශ්‍රී ලංකාව 1972 දී ඉන් ඉවත් විය.",
+          "නිරීක්ෂක රටක් ලෙස පමණක් ක්‍රියා කරයි.",
+          "2009 සිට සාමාජිකත්වය අත්හිටුවා ඇත."
+        ]
+      },
+      {
+        id: 75,
+        section: 7,
+        q: "දකුණු ආසියානු ප්‍රාදේශීය සහයෝගීතා සංවිධානයේ කෙටි යෙදුම කුමක්ද?",
+        answer: "SAARC (South Asian Association for Regional Cooperation).",
+        options: [
+          "SAARC (South Asian Association for Regional Cooperation).",
+          "ASEAN (Association of Southeast Asian Nations).",
+          "BIMSTEC.",
+          "BRICS."
+        ]
+      },
+      {
+        id: 76,
+        section: 7,
+        q: "SAARC සංවිධානයේ මූලස්ථානය පිහිටා ඇත්තේ කුමන නගරයේද?",
+        answer: "කත්මණ්ඩු (නේපාලය).",
+        options: [
+          "කත්මණ්ඩු (නේපාලය).",
+          "නවදිල්ලිය (ඉන්දියාව).",
+          "කොළඹ (ශ්‍රී ලංකාව).",
+          "ඉස්ලාමාබාද් (පකිස්ථානය)."
+        ]
+      },
+      {
+        id: 77,
+        section: 7,
+        q: "එක්සත් ජාතීන්ගේ සංවිධානයේ (UN) මූලස්ථානය පිහිටා ඇත්තේ කොහිද?",
+        answer: "නිව්යෝර්ක් නගරයේ (ඇමරිකා එක්සත් ජනපදය).",
+        options: [
+          "නිව්යෝර්ක් නගරයේ (ඇමරිකා එක්සත් ජනපදය).",
+          "ජිනීවා නගරයේ (ස්විට්සර්ලන්තය).",
+          "ලන්ඩන් නගරයේ (එක්සත් රාජධානිය).",
+          "වියානා නගරයේ (ඔස්ට්‍රියාව)."
+        ]
+      },
+      {
+        id: 78,
+        section: 7,
+        q: "ජාත්‍යන්තර මූල්‍ය අරමුදල (IMF) සහ ලෝක බැංකුවේ මූලස්ථාන පිහිටා ඇත්තේ කුමන නගරයේද?",
+        answer: "වොෂින්ටන් ඩී. සී. (ඇමරිකා එක්සත් ජනපදය).",
+        options: [
+          "වොෂින්ටන් ඩී. සී. (ඇමරිකා එක්සත් ජනපදය).",
+          "නිව්යෝර්ක් නගරයේ.",
+          "ජිනීවා නගරයේ.",
+          "බ්‍රසල්ස් නගරයේ."
+        ]
+      },
+      {
+        id: 79,
+        section: 7,
+        q: "ලෝක සෞඛ්‍ය සංවිධානයේ (WHO) මූලස්ථානය පිහිටා ඇත්තේ කොහිද?",
+        answer: "ජිනීවා (ස්විට්සර්ලන්තය).",
+        options: [
+          "ජිනීවා (ස්විට්සර්ලන්තය).",
+          "පැරිස් (ප්‍රංශය).",
+          "රෝමය (ඉතාලිය).",
+          "නිව්යෝර්ක් (ඇමරිකා එක්සත් ජනපදය)."
+        ]
+      },
+      {
+        id: 80,
+        section: 7,
+        q: "යුනෙස්කෝ (UNESCO) සංවිධානයේ මූලස්ථානය පිහිටා ඇත්තේ කුමන නගරයේද?",
+        answer: "පැරිස් (ප්‍රංශය).",
+        options: [
+          "පැරිස් (ප්‍රංශය).",
+          "ලන්ඩන් (එක්සත් රාජධානිය).",
+          "ජිනීවා (ස්විට්සර්ලන්තය).",
+          "මැඩ්රිඩ් (ස්පාඤ්ඤය)."
+        ]
+      },
+      {
+        id: 81,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ යුනෙස්කෝ ලෝක උරුම ලැයිස්තුවට ඇතුළත් පුරාණ නගර මොනවාද?",
+        answer: "අනුරාධපුරය, පොළොන්නරුව සහ ගාලු කොටුව.",
+        options: [
+          "අනුරාධපුරය, පොළොන්නරුව සහ ගාලු කොටුව.",
+          "මහනුවර, රත්නපුරය සහ මාතර.",
+          "යාපනය, ත්‍රිකුණාමලය සහ මඩකලපුව.",
+          "කුරුණෑගල, බදුල්ල සහ කෑගල්ල."
+        ]
+      },
+      {
+        id: 82,
+        section: 7,
+        q: "සීගිරිය සහ දඹුල්ල රන් මහා විහාරය ලෝක උරුම ලැයිස්තුවට ඇතුළත් වේද?",
+        answer: "ඔව්, දෙකම යුනෙස්කෝ ලෝක උරුම ලැයිස්තුවට ඇතුළත් වේ.",
+        options: [
+          "ඔව්, දෙකම යුනෙස්කෝ ලෝක උරුම ලැයිස්තුවට ඇතුළත් වේ.",
+          "සීගිරිය පමණක් ඇතුළත් වේ.",
+          "දඹුල්ල පමණක් ඇතුළත් වේ.",
+          "දෙකම ඇතුළත් වී නොමැත."
+        ]
+      },
+      {
+        id: 83,
+        section: 7,
+        q: "සිංහරාජ වන රක්ෂිතය සහ මධ්‍යම කඳුකරය ලෝක උරුම ලෙස නම් කර ඇත්තේ කුමන කාණ්ඩය යටතේද?",
+        answer: "ස්වාභාවික ලෝක උරුම ලෙස.",
+        options: [
+          "ස්වාභාවික ලෝක උරුම ලෙස.",
+          "සංස්කෘතික ලෝක උරුම ලෙස.",
+          "කාර්මික උරුම ලෙස.",
+          "අස්පර්ශනීය උරුම ලෙස."
+        ]
+      },
+      {
+        id: 84,
+        section: 7,
+        q: "ශ්‍රී ලංකාවේ ජාතික ක්‍රීඩාව කුමක්ද?",
+        answer: "වොලිබෝල්.",
+        options: [
+          "වොලිබෝල්.",
+          "ක්‍රිකට්.",
+          "පාපන්දු.",
+          "බැඩ්මින්ටන්."
+        ]
+      },
+      {
+        id: 85,
+        section: 7,
+        q: "ශ්‍රී ලංකාව ටෙස්ට් ක්‍රිකට් තත්ත්වය ලබා ගත් වර්ෂය කුමක්ද?",
+        answer: "1981 (1982 මුලදී මංගල ටෙස්ට් තරගය ක්‍රීඩා කරන ලදී).",
+        options: [
+          "1981 (1982 මුලදී මංගල ටෙස්ට් තරගය ක්‍රීඩා කරන ලදී).",
+          "1975.",
+          "1996.",
+          "1985."
+        ]
+      },
+      {
+        id: 86,
+        section: 7,
+        q: "ශ්‍රී ලංකාව එක්දින ක්‍රිකට් ලෝක කුසලානය දිනා ගත් වර්ෂය කුමක්ද?",
+        answer: "1996.",
+        options: [
+          "1996.",
+          "1992.",
+          "2007.",
+          "2014."
+        ]
+      },
+      {
+        id: 87,
+        section: 7,
+        q: "ශ්‍රී ලංකාව විස්සයි20 (T20) ලෝක කුසලානය දිනා ගත් වර්ෂය කුමක්ද?",
+        answer: "2014.",
+        options: [
+          "2014.",
+          "2009.",
+          "2012.",
+          "2016."
+        ]
+      },
+      {
+        id: 88,
+        section: 7,
+        q: "ශ්‍රී ලංකාව ඔලිම්පික් ක්‍රීඩා උළෙලකදී ප්‍රථම පදක්කම දිනා ගත්තේ කවුද?",
+        answer: "ඩන්කන් වයිට් (1948 ලන්ඩන් ඔලිම්පික් — මීටර 400 කඩුලු මතින් දිවීමේ රිදී පදක්කම).",
+        options: [
+          "ඩන්කන් වයිට් (1948 ලන්ඩන් ඔලිම්පික් — මීටර 400 කඩුලු මතින් දිවීමේ රිදී පදක්කම).",
+          "සුසන්තිකා ජයසිංහ.",
+          "නගුචලන් / ඩබ්ලිව්. ඩබ්ලිව්. ඒ. පෙරේරා.",
+          "එස්. එම්. කුලතුංග."
+        ]
+      },
+      {
+        id: 89,
+        section: 7,
+        q: "ඔලිම්පික් ක්‍රීඩා උළෙලකදී රිදී පදක්කමක් දිනා ගත් ශ්‍රී ලාංකික ක්‍රීඩිකාව කවුද?",
+        answer: "සුසන්තිකා ජයසිංහ (2000 සිඩ්නි ඔලිම්පික් — මීටර 200 ධාවන ඉසව්ව).",
+        options: [
+          "සුසන්තිකා ජයසිංහ (2000 සිඩ්නි ඔලිම්පික් — මීටර 200 ධාවන ඉසව්ව).",
+          "දමයන්ති දර්ශා.",
+          "නදීකා ලක්මාලි.",
+          "ජනනි ප්‍රභා."
+        ]
+      },
+      {
+        id: 90,
+        section: 7,
+        q: "ප්‍රථම ලෝක ශූරයා වූ ශ්‍රී ලාංකික ක්‍රීඩකයා ලෙස ප්‍රකට තුන් පිම්ම ක්‍රීඩකයා කවුද?",
+        answer: "කේ. ජේ. කරුණානායක (හෝ දැනට වාර්තා වන ජාත්‍යන්තර/පැරා/මලල ක්‍රීඩා ශූරතා අතරින් ප්‍රධාන වේ).",
+        options: [
+          "කේ. ජේ. කරුණානායක (හෝ දැනට වාර්තා වන ජාත්‍යන්තර/පැරා/මලල ක්‍රීඩා ශූරතා අතරින් ප්‍රධාන වේ).",
+          "ඩන්කන් වයිට්.",
+          "හේරත් මුදියන්සේලාගේ රත්නායක.",
+          "දිනේෂ් ප්‍රියන්ත හේරත්."
+        ]
+      },
+      {
+        id: 91,
+        section: 7,
+        q: "ප්‍රධාන භූමි ප්‍රමාණයෙන් ලෝකයේ විශාලතම රට කුමක්ද?",
+        answer: "රුසියාව.",
+        options: [
+          "රුසියාව.",
+          "කැනඩාව.",
+          "චීනය.",
+          "ඇමරිකා එක්සත් ජනපදය."
+        ]
+      },
+      {
+        id: 92,
+        section: 7,
+        q: "ජනගහනයෙන් ලෝකයේ විශාලතම රටවල් අතර ප්‍රමුඛ රටවල් මොනවාද?",
+        answer: "ඉන්දියාව සහ චීනය.",
+        options: [
+          "ඉන්දියාව සහ චීනය.",
+          "ඇමරිකා එක්සත් ජනපදය සහ රුසියාව.",
+          "බ්‍රසීලය සහ ඉන්දුනීසියාව.",
+          "පකිස්ථානය සහ නයිජීරියාව."
+        ]
+      },
+      {
+        id: 93,
+        section: 7,
+        q: "පෘථිවියේ උසම කඳු මුදුන කුමක්ද?",
+        answer: "එවරස්ට් කඳු මුදුන (මීටර 8,848.86 ක්).",
+        options: [
+          "එවරස්ට් කඳු මුදුන (මීටර 8,848.86 ක්).",
+          "K2 කඳු මුදුන.",
+          "කංචන්ජංගා කඳු මුදුන.",
+          "මකාලු කඳු මුදුන."
+        ]
+      },
+      {
+        id: 94,
+        section: 7,
+        q: "පෘථිවියේ ගැඹුරුතම සාගර ආගාධය කුමක්ද?",
+        answer: "මරියානා ආගාධය (Mariana Trench).",
+        options: [
+          "මරියානා ආගාධය (Mariana Trench).",
+          "ටොංගා ආගාධය.",
+          "පුවර්ටෝ රිකෝ ආගාධය.",
+          "ජාවා ආගාධය."
+        ]
+      },
+      {
+        id: 95,
+        section: 7,
+        q: "ලෝකයේ දිගම ගංගාව ලෙස සාමාන්‍යයෙන් සැලකෙන්නේ කුමන ගංගාවද?",
+        answer: "නයිල් ගඟ (සමහර මූලාශ්‍ර ඇමසන් ගඟ ද සලකයි).",
+        options: [
+          "නයිල් ගඟ (සමහර මූලාශ්‍ර ඇමසන් ගඟ ද සලකයි).",
+          "යැංසි ගඟ.",
+          "මිසිසිපි ගඟ.",
+          "ඩැනියුබ් ගඟ."
+        ]
+      },
+      {
+        id: 96,
+        section: 7,
+        q: "ලෝකයේ විශාලතම සාගරය කුමක්ද?",
+        answer: "පැසිෆික් සාගරය.",
+        options: [
+          "පැසිෆික් සාගරය.",
+          "ඉන්දියන් සාගරය.",
+          "අත්ලාන්තික් සාගරය.",
+          "ආක්ටික් සාගරය."
+        ]
+      },
+      {
+        id: 97,
+        section: 7,
+        q: "ලෝකයේ කුඩාම ස්වාධීන රාජ්‍යය කුමක්ද?",
+        answer: "වතිකාන නගරය.",
+        options: [
+          "වතිකාන නගරය.",
+          "මොනාකෝ.",
+          "නාඋරු.",
+          "සැන් මැරිනෝ."
+        ]
+      },
+      {
+        id: 98,
+        section: 7,
+        q: "ජපානයේ මුදල් ඒකකය කුමක්ද?",
+        answer: "යෙන් (Yen).",
+        options: [
+          "යෙන් (Yen).",
+          "වොන් (Won).",
+          "යුවාන් (Yuan).",
+          "බාත් (Baht)."
+        ]
+      },
+      {
+        id: 99,
+        section: 7,
+        q: "යුරෝපා සංගමයේ පොදු මුදල් ඒකකය කුමක්ද?",
+        answer: "යුරෝ (Euro).",
+        options: [
+          "යුරෝ (Euro).",
+          "ස්ටර්ලින් පවුම.",
+          "ස්විස් ෆ්‍රෑන්ක්.",
+          "ක්‍රෝනා."
+        ]
+      },
+      {
+        id: 100,
+        section: 7,
+        q: "එක්සත් රාජධානියේ මුදල් ඒකකය කුමක්ද?",
+        answer: "ස්ටර්ලින් පවුම (Pound Sterling).",
+        options: [
+          "ස්ටර්ලින් පවුම (Pound Sterling).",
+          "යුරෝ (Euro).",
+          "ඇමරිකානු ඩොලරය.",
+          "ෆ්‍රෑන්ක්."
+        ]
+      },
+      {
+        id: 101,
+        section: 7,
+        q: "ඉන්දියාවේ මුදල් ඒකකය කුමක්ද?",
+        answer: "ඉන්දියානු රුපියල (INR).",
+        options: [
+          "ඉන්දියානු රුපියල (INR).",
+          "ටකා (Taka).",
+          "රුපියා (Rufiyaa).",
+          "රියාල්."
+        ]
+      },
+      {
+        id: 102,
+        section: 7,
+        q: "චීනයේ නිල මුදල් ඒකකය කුමක්ද?",
+        answer: "රෙන්මින්බි / යුවාන් (Renminbi / Yuan).",
+        options: [
+          "රෙන්මින්බි / යුවාන් (Renminbi / Yuan).",
+          "යෙන් (Yen).",
+          "වොන් (Won).",
+          "ඩොං (Dong)."
+        ]
+      },
+      {
+        id: 103,
+        section: 7,
+        q: "සූර්යයාට ආසන්නතම ග්‍රහලෝකය කුමක්ද?",
+        answer: "බුධ (Mercury).",
+        options: [
+          "බුධ (Mercury).",
+          "සිකුරු (Venus).",
+          "පෘථිවිය.",
+          "අඟහරු (Mars)."
+        ]
+      },
+      {
+        id: 104,
+        section: 7,
+        q: "සෞරග්‍රහ මණ්ඩලයේ විශාලතම ග්‍රහලෝකය කුමක්ද?",
+        answer: "බ්‍රහස්පති (Jupiter).",
+        options: [
+          "බ්‍රහස්පති (Jupiter).",
+          "සෙනසුරු (Saturn).",
+          "යුරේනස් (Uranus).",
+          "නෙප්චූන් (Neptune)."
+        ]
+      },
+      {
+        id: 105,
+        section: 7,
+        q: "“රතු ග්‍රහලෝකය” ලෙස හැඳුන්වනු ලබන්නේ කුමන ග්‍රහලෝකයද?",
+        answer: "අඟහරු (Mars).",
+        options: [
+          "අඟහරු (Mars).",
+          "සිකුරු (Venus).",
+          "බුධ (Mercury).",
+          "බ්‍රහස්පති (Jupiter)."
+        ]
+      },
+      {
+        id: 106,
+        section: 7,
+        q: "වළලු පද්ධතියකින් ප්‍රසිද්ධ ග්‍රහලෝකය කුමක්ද?",
+        answer: "සෙනසුරු (Saturn).",
+        options: [
+          "සෙනසුරු (Saturn).",
+          "අඟහරු (Mars).",
+          "බුධ (Mercury).",
+          "සිකුරු (Venus)."
+        ]
+      },
+      {
+        id: 107,
+        section: 7,
+        q: "පෘථිවියේ එකම ස්වාභාවික චන්ද්‍රයා හඳුන්වනු ලබන්නේ කෙසේද?",
+        answer: "චන්ද්‍රයා / හඳ.",
+        options: [
+          "චන්ද්‍රයා / හඳ.",
+          "ටයිටන්.",
+          "යුරෝපා.",
+          "ෆෝබොස්."
+        ]
+      },
+      {
+        id: 108,
+        section: 7,
+        q: "ජලයේ රසායනික සූත්‍රය කුමක්ද?",
+        answer: "H₂O.",
+        options: [
+          "H₂O.",
+          "CO₂.",
+          "NaCl.",
+          "H₂SO₄."
+        ]
+      },
+      {
+        id: 109,
+        section: 7,
+        q: "පෘථිවි වායුගෝලයේ වැඩිම ප්‍රතිශතයකින් පවතින වායුව කුමක්ද?",
+        answer: "නයිට්‍රජන් (ආසන්න වශයෙන් 78%).",
+        options: [
+          "නයිට්‍රජන් (ආසන්න වශයෙන් 78%).",
+          "ඔක්සිජන් (ආසන්න වශයෙන් 78%).",
+          "ආගන් (ආසන්න වශයෙන් 78%).",
+          "කාබන් ඩයොක්සයිඩ් (ආසන්න වශයෙන් 78%)."
+        ]
+      },
+      {
+        id: 110,
+        section: 7,
+        q: "ශාක ආහාර නිපදවීමේ ක්‍රියාවලිය හැඳුන්වනු ලබන්නේ කුමන නමකින්ද?",
+        answer: "ප්‍රභාසංශ්ලේෂණය (Photosynthesis).",
+        options: [
+          "ප්‍රභාසංශ්ලේෂණය (Photosynthesis).",
+          "ස්වසනය (Respiration).",
+          "උත්ස්වේදනය (Transpiration).",
+          "පැසවීම (Fermentation)."
+        ]
+      },
+      {
+        id: 111,
+        section: 7,
+        q: "මිනිස් සිරුරේ විශාලතම අභ්‍යන්තර/බාහිර අවයවය ලෙස සැලකෙන්නේ කුමක්ද?",
+        answer: "සම (බාහිරව) සහ අක්මාව (අභ්‍යන්තරව).",
+        options: [
+          "සම (බාහිරව) සහ අක්මාව (අභ්‍යන්තරව).",
+          "හෘදය සහ පෙනහළු.",
+          "වකුගඩු සහ මොළය.",
+          "ආමාශය සහ සුෂුම්නාව."
+        ]
+      },
+      {
+        id: 112,
+        section: 7,
+        q: "රුධිරය පොම්ප කරන ප්‍රධාන අවයවය කුමක්ද?",
+        answer: "හෘදය.",
+        options: [
+          "හෘදය.",
+          "අක්මාව.",
+          "පෙනහළු.",
+          "වකුගඩුව."
+        ]
+      },
+      {
+        id: 113,
+        section: 7,
+        q: "පරිගණක විද්‍යාවේ CPU යන්නෙන් අදහස් කරන්නේ කුමක්ද?",
+        answer: "Central Processing Unit (මධ්‍යම සැකසුම් ඒකකය).",
+        options: [
+          "Central Processing Unit (මධ්‍යම සැකසුම් ඒකකය).",
+          "Computer Personal Unit.",
+          "Central Program Utility.",
+          "Core Processing User."
+        ]
+      },
+      {
+        id: 114,
+        section: 7,
+        q: "වෙබ් පිටු සැකසීමේදී භාවිත වන මූලික සලකුණු භාෂාව කුමක්ද?",
+        answer: "HTML (HyperText Markup Language).",
+        options: [
+          "HTML (HyperText Markup Language).",
+          "SQL.",
+          "Python.",
+          "HTTP."
+        ]
+      },
+      {
+        id: 115,
+        section: 7,
+        q: "කෘත්‍රිම බුද්ධිය (Artificial Intelligence - AI) යන්නෙන් සාමාන්‍යයෙන් අදහස් වන්නේ කුමක්ද?",
+        answer: "මිනිස් බුද්ධියට සමාන කාර්යයන් ඉටු කිරීමට පරිගණක පද්ධති සැකසීමේ තාක්ෂණය.",
+        options: [
+          "මිනිස් බුද්ධියට සමාන කාර්යයන් ඉටු කිරීමට පරිගණක පද්ධති සැකසීමේ තාක්ෂණය.",
+          "පරිගණක මොනිටරයේ දීප්තිය වැඩි කිරීමේ තාක්ෂණය.",
+          "අන්තර්ජාල වේගය මැනීමේ ඒකකය.",
+          "දත්ත ගබඩා කරන භෞතික තැටියක්."
+        ]
+      },
+      {
+        id: 116,
+        section: 7,
+        q: "සාපේක්ෂතාවාදය සමඟ සම්බන්ධ ප්‍රකට භෞතික විද්‍යාඥයා කවුද?",
+        answer: "ඇල්බට් අයින්ස්ටයින් (සාපේක්ෂතාවාදය).",
+        options: [
+          "ඇල්බට් අයින්ස්ටයින් (සාපේක්ෂතාවාදය).",
+          "අයිසැක් නිව්ටන්.",
+          "මයිකල් ෆැරඩේ.",
+          "නීල්ස් බෝර්."
+        ]
+      },
+      {
+        id: 117,
+        section: 7,
+        q: "ගුරුත්වාකර්ෂණ නියමය සමඟ සම්බන්ධ ප්‍රකට විද්‍යාඥයා කවුද?",
+        answer: "සර් අයිසැක් නිව්ටන්.",
+        options: [
+          "සර් අයිසැක් නිව්ටන්.",
+          "ඇල්බට් අයින්ස්ටයින්.",
+          "ගැලීලියෝ ගැලිලි.",
+          "ජේම්ස් ක්ලාක් මැක්ස්වෙල්."
+        ]
+      },
+      {
+        id: 118,
+        section: 7,
+        q: "පරිණාමවාදය පිළිබඳ ‘ස්වාභාවික වරණය’ සංකල්පය ඉදිරිපත් කළේ කවුද?",
+        answer: "චාල්ස් ඩාවින්.",
+        options: [
+          "චාල්ස් ඩාවින්.",
+          "ග්‍රෙගර් මෙන්ඩල්.",
+          "ලුවී පාස්චර්.",
+          "රොබර්ට් හුක්."
+        ]
+      },
+      {
+        id: 119,
+        section: 7,
+        q: "පෙනිසිලින් සොයා ගත් විද්‍යාඥයා කවුද?",
+        answer: "ඇලෙක්සැන්ඩර් ෆ්ලෙමින්.",
+        options: [
+          "ඇලෙක්සැන්ඩර් ෆ්ලෙමින්.",
+          "මාරි කියුරි.",
+          "එඩ්වඩ් ජෙනර්.",
+          "ජෝනස් සෝල්ක්."
+        ]
+      },
+      {
+        id: 120,
+        section: 7,
+        q: "විදුලි බල්බය සංවර්ධනය කිරීමේදී ප්‍රකට වූ නව නිපැයුම්කරු කවුද?",
+        answer: "තෝමස් අල්වා එඩිසන්.",
+        options: [
+          "තෝමස් අල්වා එඩිසන්.",
+          "නිකොලා ටෙස්ලා.",
+          "ග්‍රැහැම් බෙල්.",
+          "මයිකල් ෆැරඩේ."
+        ]
+      },
+      {
+        id: 121,
+        section: 7,
+        q: "සූර්යයා කේන්ද්‍ර කරගත් සෞරග්‍රහ මණ්ඩල ආකෘතිය ඉදිරිපත් කළ ප්‍රකට තාරකා විද්‍යාඥයා කවුද?",
+        answer: "නිකොලස් කොපර්නිකස්.",
+        options: [
+          "නිකොලස් කොපර්නිකස්.",
+          "ටොලමි.",
+          "ජොහැන්නස් කෙප්ලර්.",
+          "එඩ්වින් හබල්."
+        ]
+      },
+      {
+        id: 122,
+        section: 7,
+        q: "දුරේක්ෂය භාවිතයෙන් බ්‍රහස්පතිගේ චන්ද්‍රයන් නිරීක්ෂණය කළ විද්‍යාඥයා කවුද?",
+        answer: "ගැලීලියෝ ගැලිලි.",
+        options: [
+          "ගැලීලියෝ ගැලිලි.",
+          "අයිසැක් නිව්ටන්.",
+          "කොපර්නිකස්.",
+          "ටයිකෝ බ්‍රාහේ."
+        ]
+      },
+      {
+        id: 123,
+        section: 7,
+        q: "පළමු පරමාණුක ආකෘතිය / න්‍යෂ්ටිය පිළිබඳ පර්යේෂණ කළ ප්‍රකට විද්‍යාඥයින් අතරින් කෙනෙකු නම් කරන්න.",
+        answer: "අර්නස්ට් රදර්ෆර්ඩ්.",
+        options: [
+          "අර්නස්ට් රදර්ෆර්ඩ්.",
+          "ඇලෙක්සැන්ඩර් ෆ්ලෙමින්.",
+          "චාල්ස් ඩාවින්.",
+          "ග්‍රැහැම් බෙල්."
+        ]
+      },
+      {
+        id: 124,
+        section: 7,
+        q: "ජලයේ විද්‍යුත් ධාරාවක් ගමන් කිරීම හඳුන්වනු ලබන්නේ කෙසේද?",
+        answer: "විද්‍යුත් විච්ඡේදනය (Electrolysis).",
+        options: [
+          "විද්‍යුත් විච්ඡේදනය (Electrolysis).",
+          "ආස්‍රැතිය (Distillation).",
+          "ඌර්ධවපාතනය (Sublimation).",
+          "වාෂ්පීකරණය (Evaporation)."
+        ]
+      },
+      {
+        id: 125,
+        section: 7,
+        q: "ශබ්දය රික්තයක් හරහා ගමන් කළ හැකිද?",
+        answer: "නැත; ශබ්ද තරංග ගමන් කිරීමට ඝන, ද්‍රව හෝ වායු මාධ්‍යයක් අවශ්‍ය වේ.",
+        options: [
+          "නැත; ශබ්ද තරංග ගමන් කිරීමට ඝන, ද්‍රව හෝ වායු මාධ්‍යයක් අවශ්‍ය වේ.",
+          "ඔව්; රික්තය තුළ ශබ්දය ආලෝකයට වඩා වේගයෙන් ගමන් කරයි.",
+          "ඔව්; චුම්භක ක්ෂේත්‍රයක් ඇති විට පමණක් ගමන් කළ හැකිය.",
+          "ඔව්; අඩු පීඩන රික්තයකදී පමණක් ගමන් කරයි."
+        ]
+      },
+      {
+        id: 126,
+        section: 7,
+        q: "ආලෝකයේ වේගය රික්තය තුළ ආසන්න වශයෙන් කොපමණද?",
+        answer: "තත්පරයට කිලෝමීටර් 300,000 ක් (ආසන්න වශයෙන් 3 × 10⁸ m/s).",
+        options: [
+          "තත්පරයට කිලෝමීටර් 300,000 ක් (ආසන්න වශයෙන් 3 × 10⁸ m/s).",
+          "තත්පරයට කිලෝමීටර් 330 ක්.",
+          "තත්පරයට කිලෝමීටර් 150,000 ක්.",
+          "තත්පරයට කිලෝමීටර් 1,000,000 ක්."
+        ]
+      },
+      {
+        id: 127,
+        section: 7,
+        q: "භූමිකම්පා මනින පරිමාණයක් නම් කරන්න.",
+        answer: "රික්ටර් පරිමාණය (Richter Scale) හෝ මොමෙන්ට් මැග්නිටියුඩ පරිමාණය.",
+        options: [
+          "රික්ටර් පරිමාණය (Richter Scale) හෝ මොමෙන්ට් මැග්නිටියුඩ පරිමාණය.",
+          "බියුෆෝර්ට් පරිමාණය.",
+          "සෙල්සියස් පරිමාණය.",
+          "ඩෙසිබල් පරිමාණය."
+        ]
+      },
+      {
+        id: 128,
+        section: 7,
+        q: "සුනාමි යන්නෙන් සාමාන්‍යයෙන් අදහස් වන්නේ කුමක්ද?",
+        answer: "මුහුදු පතුලේ භූමිකම්පා, ගිනිකඳු පිපිරීම් හෝ නායයෑම හේතුවෙන් ඇතිවන දැවැන්ත සාගර රළ.",
+        options: [
+          "මුහුදු පතුලේ භූමිකම්පා, ගිනිකඳු පිපිරීම් හෝ නායයෑම හේතුවෙන් ඇතිවන දැවැන්ත සාගර රළ.",
+          "කාන්තාර ප්‍රදේශවල හමන දූවිලි කුණාටු.",
+          "ගංගාවල ජල මට්ටම සුළු වශයෙන් ඉහළ යෑම.",
+          "භූගත ජල උල්පත් සිඳී යෑම."
+        ]
+      },
+      {
+        id: 129,
+        section: 7,
+        q: "ඔසෝන් ස්තරය පෘථිවියට සිදු කරන ප්‍රධාන ආරක්ෂාව කුමක්ද?",
+        answer: "සූර්යයාගෙන් පැමිණෙන හානිකර පාරජම්බුල (UV) කිරණ අවශෝෂණය කිරීම.",
+        options: [
+          "සූර්යයාගෙන් පැමිණෙන හානිකර පාරජම්බුල (UV) කිරණ අවශෝෂණය කිරීම.",
+          "පෘථිවියේ ගුරුත්වාකර්ෂණය පවත්වා ගැනීම.",
+          "වැසි වලාකුළු නිර්මාණය කිරීම.",
+          "චුම්භක ක්ෂේත්‍රය ආරක්ෂා කිරීම."
+        ]
+      },
+      {
+        id: 130,
+        section: 7,
+        q: "හරිතාගාර ආචරණය සමඟ සම්බන්ධ ප්‍රධාන වායුවක් නම් කරන්න.",
+        answer: "කාබන් ඩයොක්සයිඩ් (CO₂) හෝ මීතේන් (CH₄).",
+        options: [
+          "කාබන් ඩයොක්සයිඩ් (CO₂) හෝ මීතේන් (CH₄).",
+          "හීලියම් (He).",
+          "නියෝන් (Ne).",
+          "ආගන් (Ar)."
+        ]
+      },
+      {
+        id: 131,
+        section: 7,
+        q: "පරිසර දූෂණය අවම කිරීම සඳහා භාවිත වන ‘3R’ මූලධර්මය කුමක්ද?",
+        answer: "Reduce (අඩු කිරීම), Reuse (නැවත භාවිතය) සහ Recycle (ප්‍රතිචක්‍රීකරණය).",
+        options: [
+          "Reduce (අඩු කිරීම), Reuse (නැවත භාවිතය) සහ Recycle (ප්‍රතිචක්‍රීකරණය).",
+          "Read, Repeat, Review.",
+          "Remove, Replace, Restore.",
+          "Run, Rest, Recover."
+        ]
+      },
+      {
+        id: 132,
+        section: 7,
+        q: "ප්‍රකාශ සංස්ලේෂණයේදී ශාක මගින් අවශෝෂණය කරන ප්‍රධාන වායුව කුමක්ද?",
+        answer: "කාබන් ඩයොක්සයිඩ්.",
+        options: [
+          "කාබන් ඩයොක්සයිඩ්.",
+          "ඔක්සිජන්.",
+          "නයිට්‍රජන්.",
+          "හයිඩ්‍රජන්."
+        ]
+      },
+      {
+        id: 133,
+        section: 7,
+        q: "ප්‍රකාශ සංස්ලේෂණයේදී ශාක මගින් පිට කරන ප්‍රධාන වායුව කුමක්ද?",
+        answer: "ඔක්සිජන්.",
+        options: [
+          "ඔක්සිජන්.",
+          "කාබන් ඩයොක්සයිඩ්.",
+          "සල්ෆර් ඩයොක්සයිඩ්.",
+          "කාබන් මොනොක්සයිඩ්."
+        ]
+      },
+      {
+        id: 134,
+        section: 7,
+        q: "මානව රුධිරයේ ඔක්සිජන් රැගෙන යන ප්‍රෝටීනය කුමක්ද?",
+        answer: "හිමොග්ලොබින්.",
+        options: [
+          "හිමොග්ලොබින්.",
+          "ඉන්සියුලින්.",
+          "කෙරටින්.",
+          "ඇමයිලේස්."
+        ]
+      },
+      {
+        id: 135,
+        section: 7,
+        q: "විටමින් C ඌනතාවයෙන් ඇති විය හැකි ප්‍රසිද්ධ රෝගී තත්ත්වය කුමක්ද?",
+        answer: "ස්කර්වි (Scurvy).",
+        options: [
+          "ස්කර්වි (Scurvy).",
+          "රිකට්ස් (Rickets).",
+          "බෙරිබෙරි (Beriberi).",
+          "ගොයිටර් (Goitre)."
+        ]
+      },
+      {
+        id: 136,
+        section: 7,
+        q: "විටමින් D ශරීරයට ප්‍රධාන වශයෙන් ලබා ගත හැකි ස්වාභාවික ප්‍රභවයක් කුමක්ද?",
+        answer: "හිරු එළිය.",
+        options: [
+          "හිරු එළිය.",
+          "සඳ එළිය.",
+          "කාන්තාර සුළං.",
+          "ලුණු ජලය."
+        ]
+      },
+      {
+        id: 137,
+        section: 7,
+        q: "මදුරුවන් මගින් බෝ වන ප්‍රධාන රෝගයක් නම් කරන්න.",
+        answer: "ඩෙංගු හෝ මැලේරියාව.",
+        options: [
+          "ඩෙංගු හෝ මැලේරියාව.",
+          "කොලරාව හෝ ටයිෆොයිඩ්.",
+          "ක්ෂය රෝගය.",
+          "හෙපටයිටිස් A."
+        ]
+      },
+      {
+        id: 138,
+        section: 7,
+        q: "ලෝක සෞඛ්‍ය සංවිධානයේ (WHO) ප්‍රධාන අරමුණ කුමක්ද?",
+        answer: "ජාත්‍යන්තර මහජන සෞඛ්‍යය ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම.",
+        options: [
+          "ජාත්‍යන්තර මහජන සෞඛ්‍යය ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම.",
+          "ජාත්‍යන්තර ගුවන් ගමන් පාලනය කිරීම.",
+          "ලෝක මුදල් අනුපාත තීරණය කිරීම.",
+          "පුරාවස්තු සංරක්ෂණය කිරීම."
+        ]
+      },
+      {
+        id: 139,
+        section: 7,
+        q: "එක්සත් ජාතීන්ගේ ළමා අරමුදලේ කෙටි යෙදුම කුමක්ද?",
+        answer: "UNICEF.",
+        options: [
+          "UNICEF.",
+          "UNESCO.",
+          "UNHCR.",
+          "UNDP."
+        ]
+      },
+      {
+        id: 140,
+        section: 7,
+        q: "ජාත්‍යන්තර කම්කරු සංවිධානයේ කෙටි යෙදුම කුමක්ද?",
+        answer: "ILO (International Labour Organization).",
+        options: [
+          "ILO (International Labour Organization).",
+          "IMO.",
+          "IMF.",
+          "ITU."
+        ]
+      },
+      {
+        id: 141,
+        section: 7,
+        q: "ජාත්‍යන්තර අධිකරණය (ICJ) පිහිටා ඇත්තේ කුමන නගරයේද?",
+        answer: "හේග් (The Hague — නෙදර්ලන්තය).",
+        options: [
+          "හේග් (The Hague — නෙදර්ලන්තය).",
+          "ජිනීවා (ස්විට්සර්ලන්තය).",
+          "නිව්යෝර්ක් (ඇමරිකා එක්සත් ජනපදය).",
+          "පැරිස් (ප්‍රංශය)."
+        ]
+      },
+      {
+        id: 142,
+        section: 7,
+        q: "ජාත්‍යන්තර අපරාධ අධිකරණයේ කෙටි යෙදුම කුමක්ද?",
+        answer: "ICC (International Criminal Court).",
+        options: [
+          "ICC (International Criminal Court).",
+          "ICJ.",
+          "ADB.",
+          "AIIB."
+        ]
+      },
+      {
+        id: 143,
+        section: 7,
+        q: "නෝර්වේ රටේ අගනුවර කුමක්ද?",
+        answer: "ඔස්ලෝ.",
+        options: [
+          "ඔස්ලෝ.",
+          "ස්ටොක්හෝම්.",
+          "හෙල්සින්කි.",
+          "කෝපන්හේගන්."
+        ]
+      },
+      {
+        id: 144,
+        section: 7,
+        q: "ස්වීඩනයේ අගනුවර කුමක්ද?",
+        answer: "ස්ටොක්හෝම්.",
+        options: [
+          "ස්ටොක්හෝම්.",
+          "ඔස්ලෝ.",
+          "හෙල්සින්කි.",
+          "ඩබ්ලින්."
+        ]
+      },
+      {
+        id: 145,
+        section: 7,
+        q: "ෆින්ලන්තයේ අගනුවර කුමක්ද?",
+        answer: "හෙල්සින්කි.",
+        options: [
+          "හෙල්සින්කි.",
+          "කෝපන්හේගන්.",
+          "ඔස්ලෝ.",
+          "රේක්ජාවික්."
+        ]
+      },
+      {
+        id: 146,
+        section: 7,
+        q: "ඩෙන්මාකයේ අගනුවර කුමක්ද?",
+        answer: "කෝපන්හේගන්.",
+        options: [
+          "කෝපන්හේගන්.",
+          "ස්ටොක්හෝම්.",
+          "හෙල්සින්කි.",
+          "ඇම්ස්ටර්ඩෑම්."
+        ]
+      },
+      {
+        id: 147,
+        section: 7,
+        q: "ස්විට්සර්ලන්තයේ අගනුවර ලෙස සැලකෙන්නේ කුමන නගරයද?",
+        answer: "බර්න් (Bern).",
+        options: [
+          "බර්න් (Bern).",
+          "සූරිච්.",
+          "ජිනීවා.",
+          "බාසල්."
+        ]
+      },
+      {
+        id: 148,
+        section: 7,
+        q: "ඔස්ට්‍රේලියාවේ අගනුවර කුමක්ද?",
+        answer: "කැන්බරා.",
+        options: [
+          "කැන්බරා.",
+          "සිඩ්නි.",
+          "මෙල්බර්න්.",
+          "පර්ත්."
+        ]
+      },
+      {
+        id: 149,
+        section: 7,
+        q: "කැනඩාවේ අගනුවර කුමක්ද?",
+        answer: "ඔටාවා.",
+        options: [
+          "ඔටාවා.",
+          "ටොරොන්ටෝ.",
+          "වැන්කුවර්.",
+          "මොන්ට්‍රියල්."
+        ]
+      },
+      {
+        id: 150,
+        section: 7,
+        q: "බ්‍රසීලයේ අගනුවර කුමක්ද?",
+        answer: "බ්‍රසීලියා.",
+        options: [
+          "බ්‍රසීලියා.",
+          "රියෝ ද ජැනයිරෝ.",
+          "සාඕ පවුලෝ.",
+          "සැල්වදෝර්."
+        ]
+      },
+      {
+        id: 151,
+        section: 7,
+        q: "ආර්ජන්ටිනාවේ අගනුවර කුමක්ද?",
+        answer: "බුවනෝස් අයර්ස්.",
+        options: [
+          "බුවනෝස් අයර්ස්.",
+          "සන්තියාගෝ.",
+          "ලීමා.",
+          "මොන්ටෙවීඩියෝ."
+        ]
+      },
+      {
+        id: 152,
+        section: 7,
+        q: "දකුණු අප්‍රිකාවේ පරිපාලන අගනුවර කුමක්ද?",
+        answer: "ප්‍රිටෝරියා.",
+        options: [
+          "ප්‍රිටෝරියා.",
+          "කේප් ටවුන්.",
+          "ජොහැන්නස්බර්ග්.",
+          "ඩර්බන්."
+        ]
+      },
+      {
+        id: 153,
+        section: 7,
+        q: "ඊජිප්තුවේ අගනුවර කුමක්ද?",
+        answer: "කයිරෝ.",
+        options: [
+          "කයිරෝ.",
+          "ඇලෙක්සැන්ඩ්‍රියා.",
+          "ටියුනිස්.",
+          "ඇල්ජියර්ස්."
+        ]
+      },
+      {
+        id: 154,
+        section: 7,
+        q: "තුර්කියේ අගනුවර කුමක්ද?",
+        answer: "අන්කාරා.",
+        options: [
+          "අන්කාරා.",
+          "ඉස්තාන්බුල්.",
+          "ඉස්මීර්.",
+          "ඇන්ටාලියා."
+        ]
+      },
+      {
+        id: 155,
+        section: 7,
+        q: "සෞදි අරාබියේ අගනුවර කුමක්ද?",
+        answer: "රියාද්.",
+        options: [
+          "රියාද්.",
+          "ජෙඩා.",
+          "මක්කම.",
+          "දම්මාම්."
+        ]
+      },
+      {
+        id: 156,
+        section: 7,
+        q: "එක්සත් අරාබි එමීර් රාජ්‍යයේ අගනුවර කුමක්ද?",
+        answer: "අබුඩාබි.",
+        options: [
+          "අබුඩාබි.",
+          "ඩුබායි.",
+          "ෂාජා.",
+          "අජ්මාන්."
+        ]
+      },
+      {
+        id: 157,
+        section: 7,
+        q: "කටාර් රාජ්‍යයේ අගනුවර කුමක්ද?",
+        answer: "දෝහා.",
+        options: [
+          "දෝහා.",
+          "මනාමා.",
+          "මස්කට්.",
+          "කුවේට් නගරය."
+        ]
+      },
+      {
+        id: 158,
+        section: 7,
+        q: "ඉන්දුනීසියාවේ පරිපාලන අගනුවර ලෙස පවතින්නේ කුමන නගරයද?",
+        answer: "ජකර්තා (නව අගනුවර ලෙස නුසන්තාරා සංවර්ධනය වෙමින් පවතී).",
+        options: [
+          "ජකර්තා (නව අගනුවර ලෙස නුසන්තාරා සංවර්ධනය වෙමින් පවතී).",
+          "බාලි.",
+          "සූරබයා.",
+          "බැන්ඩුං."
+        ]
+      },
+      {
+        id: 159,
+        section: 7,
+        q: "මැලේසියාවේ අගනුවර කුමක්ද?",
+        answer: "ක්වාලා ලම්පූර්.",
+        options: [
+          "ක්වාලා ලම්පූර්.",
+          "පෙනෑං.",
+          "ජොහෝර් බාරු.",
+          "මලක්කා."
+        ]
+      },
+      {
+        id: 160,
+        section: 7,
+        q: "තායිලන්තයේ අගනුවර කුමක්ද?",
+        answer: "බැංකොක්.",
+        options: [
+          "බැංකොක්.",
+          "චියැං මායි.",
+          "පුකෙට්.",
+          "පටායා."
+        ]
+      },
+      {
+        id: 161,
+        section: 7,
+        q: "වියට්නාමයේ අගනුවර කුමක්ද?",
+        answer: "හැනෝයි.",
+        options: [
+          "හැනෝයි.",
+          "හෝ චි මිං නගරය.",
+          "ඩා නං.",
+          "හයි ෆොං."
+        ]
+      },
+      {
+        id: 162,
+        section: 7,
+        q: "පකිස්ථානයේ අගනුවර කුමක්ද?",
+        answer: "ඉස්ලාමාබාද්.",
+        options: [
+          "ඉස්ලාමාබාද්.",
+          "කරච්චි.",
+          "ලාහෝර්.",
+          "පෙෂාවර්."
+        ]
+      },
+      {
+        id: 163,
+        section: 7,
+        q: "බංග්ලාදේශයේ අගනුවර කුමක්ද?",
+        answer: "ඩකා.",
+        options: [
+          "ඩකා.",
+          "චිතගොං.",
+          "කුල්නා.",
+          "සිල්හෙට්."
+        ]
+      },
+      {
+        id: 164,
+        section: 7,
+        q: "නේපාලයේ අගනුවර කුමක්ද?",
+        answer: "කත්මණ්ඩු.",
+        options: [
+          "කත්මණ්ඩු.",
+          "පොඛාරා.",
+          "ලලිත්පූර්.",
+          "බිරාට්නගර්."
+        ]
+      },
+      {
+        id: 165,
+        section: 7,
+        q: "භූතානයේ අගනුවර කුමක්ද?",
+        answer: "තිම්පු.",
+        options: [
+          "තිම්පු.",
+          "පාරෝ.",
+          "පුනාකා.",
+          "ජකාර්."
+        ]
+      },
+      {
+        id: 166,
+        section: 7,
+        q: "මාලදිවයිනේ අගනුවර කුමක්ද?",
+        answer: "මාලේ.",
+        options: [
+          "මාලේ.",
+          "අඩ්ඩු.",
+          "ෆුවාමුලා.",
+          "කුලුදුෆුෂි."
+        ]
+      },
+      {
+        id: 167,
+        section: 7,
+        q: "ගිනිකොනදිග ආසියානු ජාතීන්ගේ සංගමයේ කෙටි යෙදුම කුමක්ද?",
+        answer: "ASEAN (Association of Southeast Asian Nations).",
+        options: [
+          "ASEAN (Association of Southeast Asian Nations).",
+          "SAARC.",
+          "OPEC.",
+          "NATO."
+        ]
+      },
+      {
+        id: 168,
+        section: 7,
+        q: "එක්සත් ජාතීන්ගේ දේශගුණික විපර්යාස සමුළු (COP) සම්බන්ධ වන්නේ කුමන ක්ෂේත්‍රයටද?",
+        answer: "දේශගුණික විපර්යාස සහ කාබන් විමෝචනය අවම කිරීමේ ගිවිසුම්/ක්‍රියාමාර්ග වලට.",
+        options: [
+          "දේශගුණික විපර්යාස සහ කාබන් විමෝචනය අවම කිරීමේ ගිවිසුම්/ක්‍රියාමාර්ග වලට.",
+          "අභ්‍යවකාශ ගවේෂණ සහ චන්ද්‍රිකා කක්ෂගත කිරීමට.",
+          "ජාත්‍යන්තර වෙළඳ ගාස්තු සංශෝධනයට.",
+          "ඔලිම්පික් ක්‍රීඩා සත්කාරකත්වය ලබා දීමට."
+        ]
+      },
+      {
+        id: 169,
+        section: 7,
+        q: "තිරසර සංවර්ධන ඉලක්ක (SDGs) එක්සත් ජාතීන්ගේ සංවිධානය මගින් කුමන කාලය සඳහා හඳුන්වා දෙන ලද්දේද?",
+        answer: "2015–2030 කාලය සඳහා (ඉලක්ක 17 කින් සමන්විතය).",
+        options: [
+          "2015–2030 කාලය සඳහා (ඉලක්ක 17 කින් සමන්විතය).",
+          "2000–2015 කාලය සඳහා (ඉලක්ක 8 කින් සමන්විතය).",
+          "2020–2040 කාලය සඳහා (ඉලක්ක 12 කින් සමන්විතය).",
+          "2010–2025 කාලය සඳහා (ඉලක්ක 10 කින් සමන්විතය)."
+        ]
+      },
+      {
+        id: 170,
+        section: 7,
+        q: "ජාත්‍යන්තර ඔලිම්පික් කමිටුවේ (IOC) මූලස්ථානය පිහිටා ඇත්තේ කොහිද?",
+        answer: "ලෝසෑන් (Lausanne — ස්විට්සර්ලන්තය).",
+        options: [
+          "ලෝසෑන් (Lausanne — ස්විට්සර්ලන්තය).",
+          "සූරිච් (ස්විට්සර්ලන්තය).",
+          "ඇතන්ස් (ග්‍රීසිය).",
+          "පැරිස් (ප්‍රංශය)."
+        ]
+      },
+      {
+        id: 171,
+        section: 7,
+        q: "ජාත්‍යන්තර ක්‍රිකට් කවුන්සිලයේ (ICC) මූලස්ථානය පිහිටා ඇත්තේ කුමන නගරයේද?",
+        answer: "ඩුබායි (එක්සත් අරාබි එමීර් රාජ්‍යය).",
+        options: [
+          "ඩුබායි (එක්සත් අරාබි එමීර් රාජ්‍යය).",
+          "ලන්ඩන් (එක්සත් රාජධානිය).",
+          "මෙල්බර්න් (ඔස්ට්‍රේලියාව).",
+          "මුම්බායි (ඉන්දියාව)."
+        ]
+      },
+      {
+        id: 172,
+        section: 7,
+        q: "ෆීෆා (FIFA) පාපන්දු සංවිධානයේ මූලස්ථානය පිහිටා ඇත්තේ කොහිද?",
+        answer: "සූරිච් (Zurich — ස්විට්සර්ලන්තය).",
+        options: [
+          "සූරිච් (Zurich — ස්විට්සර්ලන්තය).",
+          "ලෝසෑන් (ස්විට්සර්ලන්තය).",
+          "මැඩ්රිඩ් (ස්පාඤ්ඤය).",
+          "රෝමය (ඉතාලිය)."
+        ]
+      },
+      {
+        id: 173,
+        section: 7,
+        q: "ලෝක කාලගුණ විද්‍යා සංවිධානයේ (WMO) මූලස්ථානය පිහිටා ඇත්තේ කොහිද?",
+        answer: "ජිනීවා (ස්විට්සර්ලන්තය).",
+        options: [
+          "ජිනීවා (ස්විට්සර්ලන්තය).",
+          "වියානා (ඔස්ට්‍රියාව).",
+          "නිව්යෝර්ක් (ඇමරිකා එක්සත් ජනපදය).",
+          "ටෝකියෝ (ජපානය)."
+        ]
+      },
+      {
+        id: 174,
+        section: 7,
+        q: "සම්පූර්ණ ප්‍රශ්න 174 ක සංග්‍රහය තුළ අවසන් ප්‍රශ්නය ලෙස මෙම ලේඛනය අවසන් වන්නේ කුමන පිළිතුර සමඟද?",
+        answer: "1 සිට 174 දක්වා සියලුම ප්‍රශ්න සහ ඒවාට අදාළ පිළිතුරු සම්පූර්ණ කර ඇත.",
+        options: [
+          "1 සිට 174 දක්වා සියලුම ප්‍රශ්න සහ ඒවාට අදාළ පිළිතුරු සම්පූර්ණ කර ඇත.",
+          "මෙම ලේඛනය ප්‍රශ්න 150 කින් අවසන් වේ.",
+          "මෙම සංග්‍රහයට පිළිතුරු ඇතුළත් කර නොමැත.",
+          "අවසන් ප්‍රශ්නය 2024 සංගණන දත්ත පමණි."
+        ]
+      }
+    ];
+
+    const STORAGE_KEY = "sinhala_mcq_174_state_v1";
+    const OPTION_LETTERS = ["A", "B", "C", "D"];
+
+    /**
+     * Application State
+     */
+    let state = {
+      mode: "instant", // 'instant' | 'exam'
+      selectedSection: "ALL",
+      statusFilter: "ALL",
+      searchQuery: "",
+      currentQuestionId: 1,
+      answers: {}, // { [questionId]: optionIndex (0..3) }
+      bookmarks: {} // { [questionId]: boolean }
+    };
+
+    /**
+     * Load state safely from localStorage
+     */
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          state = {
+            mode: parsed.mode === "exam" ? "exam" : "instant",
+            selectedSection: parsed.selectedSection || "ALL",
+            statusFilter: parsed.statusFilter || "ALL",
+            searchQuery: typeof parsed.searchQuery === "string" ? parsed.searchQuery : "",
+            currentQuestionId:
+              typeof parsed.currentQuestionId === "number" &&
+              parsed.currentQuestionId >= 1 &&
+              parsed.currentQuestionId <= QUESTIONS.length
+                ? parsed.currentQuestionId
+                : 1,
+            answers: parsed.answers && typeof parsed.answers === "object" ? parsed.answers : {},
+            bookmarks: parsed.bookmarks && typeof parsed.bookmarks === "object" ? parsed.bookmarks : {}
+          };
+        }
+      } catch (err) {
+        console.error("Failed to load saved quiz progress:", err);
+      }
+    }
+
+    /**
+     * Save state safely to localStorage
+     */
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (err) {
+        console.error("Failed to save quiz progress:", err);
+      }
+    }
+
+    /**
+     * Display a non-blocking toast message
+     */
+    let toastTimer = null;
+    function showToast(message) {
+      const banner = document.getElementById("toastBanner");
+      const msgEl = document.getElementById("toastMessage");
+      msgEl.textContent = message;
+      banner.classList.remove("hidden");
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        banner.classList.add("hidden");
+      }, 3200);
+    }
+
+    /**
+     * Helper: get section object by section id
+     */
+    function getSectionById(secId) {
+      return SECTIONS.find((s) => s.id === secId) || { id: 0, title: "සාමාන්‍ය" };
+    }
+
+    /**
+     * Helper: check if a question answer is correct
+     */
+    function isQuestionCorrect(question) {
+      const selectedIdx = state.answers[question.id];
+      if (selectedIdx === undefined || selectedIdx === null) return false;
+      return question.options[selectedIdx] === question.answer;
+    }
+
+    /**
+     * Helper: check if a question has been answered
+     */
+    function isQuestionAnswered(questionId) {
+      return state.answers[questionId] !== undefined && state.answers[questionId] !== null;
+    }
+
+    /**
+     * Filter QUESTIONS according to section, statusFilter, and searchQuery
+     */
+    function getFilteredQuestions() {
+      const qTerm = state.searchQuery.trim().toLowerCase();
+
+      return QUESTIONS.filter((item) => {
+        if (state.selectedSection !== "ALL" && item.section !== Number(state.selectedSection)) {
+          return false;
+        }
+
+        const answered = isQuestionAnswered(item.id);
+        const correct = isQuestionCorrect(item);
+        const bookmarked = Boolean(state.bookmarks[item.id]);
+
+        if (state.statusFilter === "UNANSWERED" && answered) return false;
+        if (state.statusFilter === "INCORRECT" && (!answered || correct)) return false;
+        if (state.statusFilter === "CORRECT" && (!answered || !correct)) return false;
+        if (state.statusFilter === "BOOKMARKED" && !bookmarked) return false;
+
+        if (qTerm) {
+          const haystack = [
+            String(item.id),
+            item.q,
+            item.answer,
+            ...item.options,
+            getSectionById(item.section).title
+          ]
+            .join(" ")
+            .toLowerCase();
+          if (!haystack.includes(qTerm)) return false;
+        }
+
+        return true;
+      });
+    }
+
+    /**
+     * Populate Section Dropdown
+     */
+    function populateSectionSelect() {
+      const select = document.getElementById("sectionSelect");
+      select.innerHTML = `<option value="ALL">සියලුම කොටස් (ප්‍රශ්න 1 – 174)</option>`;
+      SECTIONS.forEach((sec) => {
+        const opt = document.createElement("option");
+        opt.value = String(sec.id);
+        opt.textContent = `${sec.title} (${sec.range[0]}–${sec.range[1]})`;
+        select.appendChild(opt);
+      });
+      select.value = String(state.selectedSection);
+    }
+
+    /**
+     * Update Mode Buttons UI
+     */
+    function updateModeUI() {
+      const instantBtn = document.getElementById("modeInstantBtn");
+      const examBtn = document.getElementById("modeExamBtn");
+
+      if (state.mode === "instant") {
+        instantBtn.className =
+          "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition bg-tealbrand-600 text-white shadow";
+        examBtn.className =
+          "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition text-slate-300 hover:text-white";
+      } else {
+        examBtn.className =
+          "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition bg-tealbrand-600 text-white shadow";
+        instantBtn.className =
+          "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition text-slate-300 hover:text-white";
+      }
+    }
+
+    /**
+     * Render Overall Progress & Mini Counters
+     */
+    function updateProgressSummary() {
+      const total = QUESTIONS.length;
+      let answeredCount = 0;
+      let correctCount = 0;
+      let incorrectCount = 0;
+      let bookmarkedCount = 0;
+
+      QUESTIONS.forEach((item) => {
+        if (state.bookmarks[item.id]) bookmarkedCount++;
+        if (isQuestionAnswered(item.id)) {
+          answeredCount++;
+          if (isQuestionCorrect(item)) correctCount++;
+          else incorrectCount++;
+        }
+      });
+
+      const pct = Math.round((answeredCount / total) * 100);
+      document.getElementById("progressCountText").textContent = `${answeredCount} / ${total}`;
+      document.getElementById("overallProgressBar").style.width = `${pct}%`;
+
+      document.getElementById("miniCorrect").textContent = String(correctCount);
+      document.getElementById("miniIncorrect").textContent = String(incorrectCount);
+      document.getElementById("miniBookmarked").textContent = String(bookmarkedCount);
+    }
+
+    /**
+     * Render Question Navigator Grid (1-174)
+     */
+    function renderNavigatorGrid(filteredQuestions) {
+      const grid = document.getElementById("questionGrid");
+      const navCountEl = document.getElementById("navFilteredCount");
+      const filteredSet = new Set(filteredQuestions.map((q) => q.id));
+
+      navCountEl.textContent = `ප්‍රශ්න ${filteredQuestions.length}`;
+      grid.innerHTML = "";
+
+      QUESTIONS.forEach((item) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.textContent = String(item.id);
+        btn.title = `ප්‍රශ්නය #${item.id}`;
+
+        const isCurrent = item.id === state.currentQuestionId;
+        const isInFilter = filteredSet.has(item.id);
+        const answered = isQuestionAnswered(item.id);
+        const correct = isQuestionCorrect(item);
+        const bookmarked = Boolean(state.bookmarks[item.id]);
+
+        let classes =
+          "h-8 rounded-lg text-xs font-bold flex items-center justify-center transition relative select-none ";
+
+        if (!isInFilter) {
+          classes += "bg-slate-100 text-slate-300 border border-slate-200/70 opacity-50 hover:opacity-80 ";
+        } else if (state.mode === "instant" && answered) {
+          classes += correct
+            ? "bg-emerald-600 text-white hover:bg-emerald-700 "
+            : "bg-rose-600 text-white hover:bg-rose-700 ";
+        } else if (state.mode === "exam" && answered) {
+          classes += "bg-sky-600 text-white hover:bg-sky-700 ";
+        } else if (bookmarked) {
+          classes += "bg-amber-100 text-amber-900 border-2 border-amber-500 hover:bg-amber-200 ";
+        } else {
+          classes += "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-navy-50 hover:border-navy-600 ";
+        }
+
+        if (isCurrent) {
+          classes += "ring-2 ring-offset-1 ring-navy-700 scale-105 z-10 ";
+        }
+
+        btn.className = classes;
+        btn.addEventListener("click", () => {
+          state.currentQuestionId = item.id;
+          saveState();
+          renderAll();
+          document.getElementById("questionCard").scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+
+        grid.appendChild(btn);
+      });
+    }
+
+    /**
+     * Render Active Question Card
+     */
+    function renderActiveQuestion(filteredQuestions) {
+      const emptyState = document.getElementById("emptyFilterState");
+      const contentEl = document.getElementById("questionContent");
+
+      if (filteredQuestions.length === 0) {
+        emptyState.classList.remove("hidden");
+        contentEl.classList.add("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+      contentEl.classList.remove("hidden");
+
+      let currentIndex = filteredQuestions.findIndex((q) => q.id === state.currentQuestionId);
+      if (currentIndex === -1) {
+        state.currentQuestionId = filteredQuestions[0].id;
+        currentIndex = 0;
+        saveState();
+      }
+
+      const question = filteredQuestions[currentIndex];
+      const secInfo = getSectionById(question.section);
+      const selectedOptionIdx = state.answers[question.id];
+      const answered = selectedOptionIdx !== undefined && selectedOptionIdx !== null;
+      const isBookmarked = Boolean(state.bookmarks[question.id]);
+
+      document.getElementById("qNumberBadge").textContent = `ප්‍රශ්නය #${question.id}`;
+      document.getElementById("qSectionBadge").textContent = secInfo.title;
+      document.getElementById("qQueueBadge").textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
+
+      // Bookmark button state
+      const bookmarkBtn = document.getElementById("bookmarkBtn");
+      bookmarkBtn.setAttribute("aria-pressed", String(isBookmarked));
+      document.getElementById("bookmarkIcon").textContent = isBookmarked ? "★" : "☆";
+      document.getElementById("bookmarkLabel").textContent = isBookmarked ? "පිටුසලකුණු කළා" : "පිටුසලකුණ";
+      bookmarkBtn.className = isBookmarked
+        ? "px-3 py-1.5 rounded-xl border border-amber-400 bg-amber-100 text-xs sm:text-sm font-semibold text-amber-900 flex items-center gap-1.5 transition"
+        : "px-3 py-1.5 rounded-xl border border-slate-200 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-1.5 transition";
+
+      // Question text
+      document.getElementById("questionText").textContent = question.q;
+
+      // Render 4 options (A, B, C, D)
+      const optionsContainer = document.getElementById("optionsContainer");
+      optionsContainer.innerHTML = "";
+
+      question.options.forEach((optText, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        const isSelected = selectedOptionIdx === idx;
+        const isCorrectOption = optText === question.answer;
+
+        let cardStyle =
+          "option-card w-full text-left p-3.5 sm:p-4 rounded-xl border flex items-start gap-3.5 ";
+        let letterStyle =
+          "w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 ";
+
+        if (state.mode === "instant" && answered) {
+          if (isCorrectOption) {
+            cardStyle += "bg-emerald-50 border-emerald-500 text-emerald-950 ring-1 ring-emerald-500 ";
+            letterStyle += "bg-emerald-600 text-white ";
+          } else if (isSelected && !isCorrectOption) {
+            cardStyle += "bg-rose-50 border-rose-500 text-rose-950 ring-1 ring-rose-500 ";
+            letterStyle += "bg-rose-600 text-white ";
+          } else {
+            cardStyle += "bg-slate-50 border-slate-200 text-slate-500 opacity-75 ";
+            letterStyle += "bg-slate-200 text-slate-600 ";
+          }
+        } else if (isSelected) {
+          cardStyle += "bg-navy-50 border-navy-600 text-navy-900 ring-1 ring-navy-600 ";
+          letterStyle += "bg-navy-700 text-white ";
+        } else {
+          cardStyle +=
+            "bg-white border-slate-200 hover:border-tealbrand-600 hover:bg-tealbrand-50/40 text-slate-800 ";
+          letterStyle += "bg-slate-100 text-slate-700 ";
+        }
+
+        btn.className = cardStyle;
+
+        const letterSpan = document.createElement("span");
+        letterSpan.className = letterStyle;
+        letterSpan.textContent = OPTION_LETTERS[idx];
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "text-sm sm:text-base font-medium leading-relaxed flex-1";
+        textSpan.textContent = optText;
+
+        const statusIconSpan = document.createElement("span");
+        statusIconSpan.className = "text-sm font-bold shrink-0 mt-1";
+        if (state.mode === "instant" && answered) {
+          if (isCorrectOption) {
+            statusIconSpan.className += " text-emerald-700";
+            statusIconSpan.textContent = "✓ නිවැරදියි";
+          } else if (isSelected) {
+            statusIconSpan.className += " text-rose-700";
+            statusIconSpan.textContent = "✕ වැරදියි";
+          }
+        } else if (isSelected) {
+          statusIconSpan.className += " text-navy-700";
+          statusIconSpan.textContent = "● තේරූ";
+        }
+
+        btn.appendChild(letterSpan);
+        btn.appendChild(textSpan);
+        if (statusIconSpan.textContent) btn.appendChild(statusIconSpan);
+
+        btn.addEventListener("click", () => {
+          state.answers[question.id] = idx;
+          saveState();
+          renderAll();
+        });
+
+        optionsContainer.appendChild(btn);
+      });
+
+      // Feedback box
+      const feedbackBox = document.getElementById("feedbackBox");
+      const feedbackTitle = document.getElementById("feedbackTitle");
+      const feedbackDetail = document.getElementById("feedbackDetail");
+
+      if (state.mode === "instant" && answered) {
+        const correct = isQuestionCorrect(question);
+        feedbackBox.classList.remove("hidden");
+        if (correct) {
+          feedbackBox.className =
+            "rounded-2xl p-4 sm:p-5 border bg-emerald-50/90 border-emerald-300 text-emerald-950";
+          feedbackTitle.textContent = "✓ නිවැරදි පිළිතුරයි!";
+          feedbackTitle.className = "text-sm sm:text-base font-bold text-emerald-800";
+        } else {
+          feedbackBox.className =
+            "rounded-2xl p-4 sm:p-5 border bg-rose-50/90 border-rose-300 text-rose-950";
+          feedbackTitle.textContent = "✕ ඔබ තේරූ පිළිතුර වැරදියි — නිවැරදි පිළිතුර පහත දැක්වේ:";
+          feedbackTitle.className = "text-sm sm:text-base font-bold text-rose-800";
+        }
+        feedbackDetail.textContent = question.answer;
+      } else if (state.mode === "exam" && answered) {
+        feedbackBox.classList.remove("hidden");
+        feedbackBox.className =
+          "rounded-2xl p-4 sm:p-5 border bg-sky-50 border-sky-200 text-sky-950";
+        feedbackTitle.textContent = "විභාග මාදිලිය: පිළිතුර සටහන් කර ඇත";
+        feedbackTitle.className = "text-sm font-bold text-sky-800";
+        feedbackDetail.textContent = `ඔබ තෝරාගත් විකල්පය: ${OPTION_LETTERS[selectedOptionIdx]}. අවසානයේ "ප්‍රතිඵල බලන්න" ඔබා නිවැරදි පිළිතුරු සමාලෝචනය කළ හැක.`;
+      } else {
+        feedbackBox.classList.add("hidden");
+      }
+
+      // Prev / Next buttons
+      const prevBtn = document.getElementById("prevQuestionBtn");
+      const nextBtn = document.getElementById("nextQuestionBtn");
+      prevBtn.disabled = currentIndex <= 0;
+      nextBtn.disabled = currentIndex >= filteredQuestions.length - 1;
+    }
+
+    /**
+     * Render Score Summary & Section Breakdown Panel
+     */
+    function renderSummaryPanel() {
+      const total = QUESTIONS.length;
+      let correct = 0;
+      let incorrect = 0;
+      let unanswered = 0;
+
+      QUESTIONS.forEach((q) => {
+        if (!isQuestionAnswered(q.id)) {
+          unanswered++;
+        } else if (isQuestionCorrect(q)) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+      });
+
+      const answeredTotal = correct + incorrect;
+      const pct = answeredTotal > 0 ? Math.round((correct / answeredTotal) * 100) : 0;
+
+      document.getElementById("statPercentage").textContent = `${pct}%`;
+      document.getElementById("statCorrect").textContent = String(correct);
+      document.getElementById("statIncorrect").textContent = String(incorrect);
+      document.getElementById("statUnanswered").textContent = String(unanswered);
+
+      // Section breakdown
+      const breakdownEl = document.getElementById("sectionBreakdownList");
+      breakdownEl.innerHTML = "";
+
+      SECTIONS.forEach((sec) => {
+        const secQuestions = QUESTIONS.filter((q) => q.section === sec.id);
+        let secCorrect = 0;
+        let secAnswered = 0;
+
+        secQuestions.forEach((q) => {
+          if (isQuestionAnswered(q.id)) {
+            secAnswered++;
+            if (isQuestionCorrect(q)) secCorrect++;
+          }
+        });
+
+        const secPct = secQuestions.length > 0 ? Math.round((secCorrect / secQuestions.length) * 100) : 0;
+
+        const row = document.createElement("div");
+        row.className =
+          "p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2";
+
+        row.innerHTML = `
+          <div class="min-w-0">
+            <div class="text-sm font-bold text-slate-800 truncate">${sec.title}</div>
+            <div class="text-xs text-slate-500">
+              පිළිතුරු දුන්: ${secAnswered}/${secQuestions.length} · නිවැරදි: <strong class="text-emerald-700">${secCorrect}</strong>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <div class="w-28 h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div class="h-full bg-tealbrand-600" style="width: ${secPct}%"></div>
+            </div>
+            <span class="text-xs font-bold text-navy-700 w-10 text-right">${secPct}%</span>
+            <button type="button" data-sec-id="${sec.id}" class="practice-sec-btn px-2.5 py-1 rounded-lg bg-white hover:bg-navy-50 border border-slate-300 text-xs font-semibold text-navy-700">
+              පුහුණු වන්න
+            </button>
+          </div>
+        `;
+
+        breakdownEl.appendChild(row);
+      });
+
+      breakdownEl.querySelectorAll(".practice-sec-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const secId = btn.getAttribute("data-sec-id");
+          state.selectedSection = secId;
+          state.statusFilter = "ALL";
+          document.getElementById("sectionSelect").value = secId;
+          document.getElementById("statusFilterSelect").value = "ALL";
+          const firstInSec = QUESTIONS.find((q) => q.section === Number(secId));
+          if (firstInSec) state.currentQuestionId = firstInSec.id;
+          saveState();
+          document.getElementById("summaryPanel").classList.add("hidden");
+          renderAll();
+          showToast("තෝරාගත් කොටස සක්‍රිය කරන ලදී.");
+        });
+      });
+    }
+
+    /**
+     * Render Review List (Incorrect or All 174)
+     */
+    function renderReviewList(onlyIncorrect) {
+      const container = document.getElementById("reviewListContainer");
+      const titleEl = document.getElementById("reviewListTitle");
+      const itemsEl = document.getElementById("reviewItems");
+
+      container.classList.remove("hidden");
+      itemsEl.innerHTML = "";
+
+      const list = onlyIncorrect
+        ? QUESTIONS.filter((q) => isQuestionAnswered(q.id) && !isQuestionCorrect(q))
+        : QUESTIONS;
+
+      titleEl.textContent = onlyIncorrect
+        ? `වැරදි පිළිතුරු ලැයිස්තුව (${list.length})`
+        : `සියලුම ප්‍රශ්න සහ පිළිතුරු (${list.length})`;
+
+      if (list.length === 0) {
+        itemsEl.innerHTML = `<div class="p-4 rounded-xl bg-emerald-50 text-emerald-800 text-sm font-medium">වැරදි පිළිතුරු කිසිවක් හමු නොවීය!</div>`;
+        return;
+      }
+
+      list.forEach((q) => {
+        const userIdx = state.answers[q.id];
+        const userText =
+          userIdx !== undefined && userIdx !== null
+            ? `${OPTION_LETTERS[userIdx]}. ${q.options[userIdx]}`
+            : "පිළිතුරු ලබා දී නොමැත";
+
+        const card = document.createElement("div");
+        card.className = "p-4 rounded-xl border border-slate-200 bg-white space-y-2 text-sm";
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="font-bold text-navy-700">#${q.id}. ${q.q}</span>
+            <button type="button" data-jump-id="${q.id}" class="jump-review-btn px-2.5 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-700 text-xs font-semibold shrink-0">
+              යන්න
+            </button>
+          </div>
+          <div class="text-xs text-rose-700"><strong class="font-semibold">ඔබගේ පිළිතුර:</strong> ${userText}</div>
+          <div class="text-xs text-emerald-800 bg-emerald-50 p-2.5 rounded-lg border border-emerald-200">
+            <strong class="font-semibold">නිවැරදි පිළිතුර:</strong> ${q.answer}
+          </div>
+        `;
+        itemsEl.appendChild(card);
+      });
+
+      itemsEl.querySelectorAll(".jump-review-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = Number(btn.getAttribute("data-jump-id"));
+          state.currentQuestionId = id;
+          state.selectedSection = "ALL";
+          state.statusFilter = "ALL";
+          document.getElementById("sectionSelect").value = "ALL";
+          document.getElementById("statusFilterSelect").value = "ALL";
+          saveState();
+          document.getElementById("summaryPanel").classList.add("hidden");
+          renderAll();
+          document.getElementById("questionCard").scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    }
+
+    /**
+     * Master Render Function
+     */
+    function renderAll() {
+      updateModeUI();
+      updateProgressSummary();
+      const filteredQuestions = getFilteredQuestions();
+      renderActiveQuestion(filteredQuestions);
+      renderNavigatorGrid(filteredQuestions);
+      if (!document.getElementById("summaryPanel").classList.contains("hidden")) {
+        renderSummaryPanel();
+      }
+    }
+
+    /**
+     * Bind All Event Listeners
+     */
+    function bindEvents() {
+      // Mode toggles
+      document.getElementById("modeInstantBtn").addEventListener("click", () => {
+        state.mode = "instant";
+        saveState();
+        renderAll();
+        showToast("සැණින් පිළිතුරු මාදිලිය සක්‍රියයි.");
+      });
+
+      document.getElementById("modeExamBtn").addEventListener("click", () => {
+        state.mode = "exam";
+        saveState();
+        renderAll();
+        showToast("විභාග මාදිලිය සක්‍රියයි.");
+      });
+
+      // Section & Status Filters
+      document.getElementById("sectionSelect").addEventListener("change", (e) => {
+        state.selectedSection = e.target.value;
+        const filtered = getFilteredQuestions();
+        if (filtered.length > 0 && !filtered.some((q) => q.id === state.currentQuestionId)) {
+          state.currentQuestionId = filtered[0].id;
+        }
+        saveState();
+        renderAll();
+      });
+
+      document.getElementById("statusFilterSelect").addEventListener("change", (e) => {
+        state.statusFilter = e.target.value;
+        const filtered = getFilteredQuestions();
+        if (filtered.length > 0 && !filtered.some((q) => q.id === state.currentQuestionId)) {
+          state.currentQuestionId = filtered[0].id;
+        }
+        saveState();
+        renderAll();
+      });
+
+      // Search input
+      const searchInput = document.getElementById("searchInput");
+      const clearSearchBtn = document.getElementById("clearSearchBtn");
+      searchInput.value = state.searchQuery;
+      if (state.searchQuery) clearSearchBtn.classList.remove("hidden");
+
+      searchInput.addEventListener("input", (e) => {
+        state.searchQuery = e.target.value;
+        clearSearchBtn.classList.toggle("hidden", !state.searchQuery);
+        const filtered = getFilteredQuestions();
+        if (filtered.length > 0 && !filtered.some((q) => q.id === state.currentQuestionId)) {
+          state.currentQuestionId = filtered[0].id;
+        }
+        saveState();
+        renderAll();
+      });
+
+      clearSearchBtn.addEventListener("click", () => {
+        state.searchQuery = "";
+        searchInput.value = "";
+        clearSearchBtn.classList.add("hidden");
+        saveState();
+        renderAll();
+      });
+
+      document.getElementById("resetFiltersBtn").addEventListener("click", () => {
+        state.selectedSection = "ALL";
+        state.statusFilter = "ALL";
+        state.searchQuery = "";
+        document.getElementById("sectionSelect").value = "ALL";
+        document.getElementById("statusFilterSelect").value = "ALL";
+        searchInput.value = "";
+        clearSearchBtn.classList.add("hidden");
+        saveState();
+        renderAll();
+      });
+
+      // Bookmark button
+      document.getElementById("bookmarkBtn").addEventListener("click", () => {
+        const id = state.currentQuestionId;
+        state.bookmarks[id] = !state.bookmarks[id];
+        if (!state.bookmarks[id]) delete state.bookmarks[id];
+        saveState();
+        renderAll();
+        showToast(state.bookmarks[id] ? `#${id} ප්‍රශ්නය පිටුසලකුණු කළා.` : `#${id} පිටුසලකුණ ඉවත් කළා.`);
+      });
+
+      // Prev / Next / Clear Answer
+      document.getElementById("prevQuestionBtn").addEventListener("click", () => {
+        const filtered = getFilteredQuestions();
+        const idx = filtered.findIndex((q) => q.id === state.currentQuestionId);
+        if (idx > 0) {
+          state.currentQuestionId = filtered[idx - 1].id;
+          saveState();
+          renderAll();
+        }
+      });
+
+      document.getElementById("nextQuestionBtn").addEventListener("click", () => {
+        const filtered = getFilteredQuestions();
+        const idx = filtered.findIndex((q) => q.id === state.currentQuestionId);
+        if (idx >= 0 && idx < filtered.length - 1) {
+          state.currentQuestionId = filtered[idx + 1].id;
+          saveState();
+          renderAll();
+        }
+      });
+
+      document.getElementById("clearAnswerBtn").addEventListener("click", () => {
+        delete state.answers[state.currentQuestionId];
+        saveState();
+        renderAll();
+        showToast("පිළිතුර ඉවත් කරන ලදී.");
+      });
+
+      // Jump to question number
+      const jumpInput = document.getElementById("jumpQuestionInput");
+      const performJump = () => {
+        const num = Number(jumpInput.value);
+        if (!Number.isInteger(num) || num < 1 || num > QUESTIONS.length) {
+          showToast("කරුණාකර 1 සිට 174 දක්වා වලංගු ප්‍රශ්න අංකයක් ඇතුළත් කරන්න.");
+          return;
+        }
+        state.currentQuestionId = num;
+        state.selectedSection = "ALL";
+        state.statusFilter = "ALL";
+        document.getElementById("sectionSelect").value = "ALL";
+        document.getElementById("statusFilterSelect").value = "ALL";
+        saveState();
+        renderAll();
+      };
+
+      document.getElementById("jumpQuestionBtn").addEventListener("click", performJump);
+      jumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") performJump();
+      });
+
+      // Summary panel open / close
+      const openSummary = () => {
+        renderSummaryPanel();
+        document.getElementById("summaryPanel").classList.remove("hidden");
+        document.getElementById("summaryPanel").scrollIntoView({ behavior: "smooth" });
+      };
+
+      document.getElementById("openSummaryBtn").addEventListener("click", openSummary);
+      document.getElementById("finishExamBtn").addEventListener("click", openSummary);
+      document.getElementById("closeSummaryBtn").addEventListener("click", () => {
+        document.getElementById("summaryPanel").classList.add("hidden");
+      });
+
+      // Retry incorrect questions
+      document.getElementById("retryIncorrectBtn").addEventListener("click", () => {
+        const incorrectIds = QUESTIONS.filter(
+          (q) => isQuestionAnswered(q.id) && !isQuestionCorrect(q)
+        ).map((q) => q.id);
+
+        if (incorrectIds.length === 0) {
+          showToast("නැවත පුහුණු වීමට වැරදි ප්‍රශ්න නොමැත!");
+          return;
+        }
+
+        incorrectIds.forEach((id) => delete state.answers[id]);
+        state.selectedSection = "ALL";
+        state.statusFilter = "UNANSWERED";
+        state.currentQuestionId = incorrectIds[0];
+        document.getElementById("sectionSelect").value = "ALL";
+        document.getElementById("statusFilterSelect").value = "UNANSWERED";
+        saveState();
+        document.getElementById("summaryPanel").classList.add("hidden");
+        renderAll();
+        showToast(`වැරදි ප්‍රශ්න ${incorrectIds.length} ක් නැවත පුහුණු වීමට සූදානම්.`);
+      });
+
+      document.getElementById("reviewIncorrectListBtn").addEventListener("click", () => {
+        renderReviewList(true);
+      });
+
+      document.getElementById("reviewAllListBtn").addEventListener("click", () => {
+        renderReviewList(false);
+      });
+
+      document.getElementById("hideReviewListBtn").addEventListener("click", () => {
+        document.getElementById("reviewListContainer").classList.add("hidden");
+      });
+
+      // Reset modal controls
+      const confirmModal = document.getElementById("confirmModal");
+      document.getElementById("resetProgressBtn").addEventListener("click", () => {
+        confirmModal.classList.remove("hidden");
+      });
+
+      document.getElementById("cancelResetBtn").addEventListener("click", () => {
+        confirmModal.classList.add("hidden");
+      });
+
+      document.getElementById("confirmResetKeepBookmarksBtn").addEventListener("click", () => {
+        state.answers = {};
+        state.currentQuestionId = 1;
+        saveState();
+        confirmModal.classList.add("hidden");
+        renderAll();
+        showToast("පිළිතුරු මකා දමා පිටුසලකුණු සුරකින ලදී.");
+      });
+
+      document.getElementById("confirmResetAllBtn").addEventListener("click", () => {
+        state.answers = {};
+        state.bookmarks = {};
+        state.currentQuestionId = 1;
+        saveState();
+        confirmModal.classList.add("hidden");
+        renderAll();
+        showToast("සියලු ප්‍රගතිය යළි සකසන ලදී.");
+      });
+
+      document.getElementById("toastCloseBtn").addEventListener("click", () => {
+        document.getElementById("toastBanner").classList.add("hidden");
+      });
+
+      // Keyboard shortcuts (ArrowLeft / ArrowRight when not typing in input/select)
+      document.addEventListener("keydown", (e) => {
+        const tag = document.activeElement ? document.activeElement.tagName : "";
+        if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA") return;
+        if (e.key === "ArrowLeft") {
+          document.getElementById("prevQuestionBtn").click();
+        } else if (e.key === "ArrowRight") {
+          document.getElementById("nextQuestionBtn").click();
+        }
+      });
+    }
+
+    /**
+     * Initialize Application
+     */
+    window.addEventListener("DOMContentLoaded", () => {
+      loadState();
+      populateSectionSelect();
+      bindEvents();
+      renderAll();
+    });
+  </script>
+</body>
+</html>
